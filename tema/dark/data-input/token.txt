@@ -1,0 +1,2 @@
+url: https://api.github.com/repos/langowanproject/lapro.github.io/issues
+token: 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
