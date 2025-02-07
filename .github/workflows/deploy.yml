@@ -1,4 +1,4 @@
-name: Deploy and Run Script
+name: Deploy and Run Guestbook Script
 
 on:
   push:
@@ -20,12 +20,12 @@ jobs:
         with:
           node-version: '18'  # Menggunakan Node.js versi 18
 
-      # Langkah 3: Install dependencies
+      # Langkah 3: Install dependencies (jika diperlukan)
       - name: Install dependencies
-        run: npm install  # Menginstal dependencies dari package.json
+        run: npm install  # Menginstal dependencies dari package.json (jika ada)
 
-      # Langkah 4: Jalankan skrip
-      - name: Run script
+      # Langkah 4: Jalankan skrip guestbook.js
+      - name: Run Guestbook Script
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}  # Mengambil token dari GitHub Secrets
-        run: node guestbook.js  # Menjalankan skrip JavaScript Anda
+        run: node dark/content/ucapan/guestbook.js  # Menjalankan skrip guestbook.js
