@@ -54,8 +54,8 @@ async function tampilkanKomentar(API_URL, API_TOKEN) {
 
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        // Ambil token dari environment variables (GitHub Secrets)
-        const API_URL = "https://api.github.com/repos/PEMILIK/REPO/issues"; // Ganti dengan URL API GitHub Issues Anda
+        // Ambil token dari GitHub Secrets
+        const API_URL = "https://api.github.com/repos/langowanproject/langowanproject.github.io/issues"; // URL GitHub Issues Anda
         const API_TOKEN = process.env.API_TOKEN; // Token diambil dari GitHub Secrets
 
         if (!API_TOKEN) {
