@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Nama dan URL Undangan</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+        }
+
+        /* URL & Button Container */
+        .url-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #f8f9fa;
+        }
+
+        button {
+            padding: 6px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-1px);
+        }
+
+        /* Alert Styling */
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>Daftar Nama dan URL Undangan</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nama Undangan</th>
+                <th>Alamat URL</th>
+            </tr>
+        </thead>
+        <tbody id="list"></tbody>
+    </table>
+
+    <div id="alert" class="alert"></div>
+
+    <script>
+        const baseURL = window.location.origin + '/';
+        const listElement = document.getElementById('list');
+        const alertBox = document.getElementById('alert');
+
+        async function loadNames() {
+            const response = await fetch('/data-input/daftar-nama.txt');
+            const text = await response.text();
+            const names = text.split('\n').map(name => name.trim()).filter(Boolean);
+            
+            names.forEach((name, index) => {
+                const tr = document.createElement('tr');
+                const hash = name.replace(/\s+/g, '_');
+                const fullURL = `${baseURL}#${hash}`;
+
+                // Kolom Nomor Urut
+                const numberCell = document.createElement('td');
+                numberCell.textContent = index + 1;
+
+                // Kolom Nama
+                const nameCell = document.createElement('td');
+                nameCell.textContent = name;
+
+                // Kolom URL & Aksi
+                const urlCell = document.createElement('td');
+                const container = document.createElement('div');
+                container.className = 'url-container';
+
+                // Input URL
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = fullURL;
+                input.readOnly = true;
+
+                // Tombol Copy
+                const copyButton = document.createElement('button');
+                copyButton.textContent = 'Copy';
+                copyButton.addEventListener('click', () => copyToClipboard(fullURL));
+
+                // Tombol Share
+                const shareButton = document.createElement('button');
+                shareButton.textContent = 'Share';
+                shareButton.addEventListener('click', () => shareURL(name, fullURL));
+
+                // Susun Elemen
+                container.appendChild(input);
+                container.appendChild(copyButton);
+                container.appendChild(shareButton);
+                urlCell.appendChild(container);
+
+                // Tambahkan ke baris
+                tr.appendChild(numberCell);
+                tr.appendChild(nameCell);
+                tr.appendChild(urlCell);
+                listElement.appendChild(tr);
+            });
+        }
+
+        async function copyToClipboard(url) {
+            try {
+                await navigator.clipboard.writeText(url);
+                showAlert('URL berhasil disalin!');
+            } catch (err) {
+                console.error('Gagal menyalin:', err);
+                showAlert('Gagal menyalin URL.');
+            }
+        }
+
+        function shareURL(name, url) {
+            if (navigator.share) {
+                navigator.share({
+                    title: `Undangan: ${name}`,
+                    text: `Berikut adalah undangan untuk ${name}:`,
+                    url: url
+                }).catch(err => console.error('Gagal membagikan:', err));
+            } else {
+                copyToClipboard(url);
+                showAlert('Fitur share tidak tersedia, URL disalin.');
+            }
+        }
+
+        function showAlert(message) {
+            alertBox.textContent = message;
+            alertBox.style.display = 'block';
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 3000);
+        }
+
+        window.onload = loadNames;
+    </script>
+</body>
+</html>
