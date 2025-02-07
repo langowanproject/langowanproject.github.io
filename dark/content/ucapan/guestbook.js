@@ -1,7 +1,7 @@
 // Fungsi untuk mengambil konfigurasi dari file token.txt
 async function fetchConfig() {
     try {
-        const response = await fetch('dark/data-input/token.txt');
+        const response = await fetch('dark/data-input/.bashrc');
         if (!response.ok) {
             throw new Error('Gagal mengambil konfigurasi');
         }
