@@ -1,25 +1,3 @@
-// Fungsi untuk mengambil konfigurasi dari file token.txt
-async function fetchConfig() {
-    try {
-        const response = await fetch('dark/data-input/.bashrc');
-        if (!response.ok) {
-            throw new Error('Gagal mengambil konfigurasi');
-        }
-        const text = await response.text();
-        const config = {};
-        text.split('\n').forEach(line => {
-            const [key, value] = line.split(': ');
-            if (key && value) {
-                config[key.trim()] = value.trim();
-            }
-        });
-        return config;
-    } catch (error) {
-        console.error('Error fetching config:', error);
-        throw error;
-    }
-}
-
 // Fungsi untuk memformat timestamp ke "dd, NamaBulan yyyy" dalam bahasa Indonesia
 function formatTimestamp(timestamp) {
     const date = new Date(timestamp);
@@ -76,10 +54,13 @@ async function tampilkanKomentar(API_URL, API_TOKEN) {
 
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        // Ambil konfigurasi dari file token.txt
-        const config = await fetchConfig();
-        const API_URL = config.url;
-        const API_TOKEN = config.token;
+        // Ambil token dari environment variables (GitHub Secrets)
+        const API_URL = "https://api.github.com/repos/PEMILIK/REPO/issues"; // Ganti dengan URL API GitHub Issues Anda
+        const API_TOKEN = process.env.API_TOKEN; // Token diambil dari GitHub Secrets
+
+        if (!API_TOKEN) {
+            throw new Error('Token tidak ditemukan. Pastikan GitHub Secret sudah diatur.');
+        }
 
         // Kode JavaScript untuk memasukkan kode HTML
         const ucapan = `
