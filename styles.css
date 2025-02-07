@@ -88,10 +88,36 @@ body {
   align-items: center;
 }
 
-.fakeimg {
+.boximg1 {
+  height: 200px;
+  width: 105px;
   background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+  margin: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+}
+
+.boximg2 {
+  height: 60px;
+  width: 60px;
+  background-color: #aaa;
+  margin: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+}
+
+.imgwrap {
+    display: flex;
+}
+
+.imgwrap-side {
+    display: grid;
 }
 
 @media screen and (max-width: 700px) {

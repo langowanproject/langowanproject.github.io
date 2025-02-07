@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="dark/assets/favicon.svg" type="image/x-icon">
+    <title class="title"></title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="dark/css/css-reset.css">
+    <link rel="stylesheet" href="dark/navbar/navbar-popup.css">
+    <link rel="stylesheet" href="dark/reveal/reveal.css">
+    <link rel="stylesheet" href="dark/css/style.css">
+    <link rel="stylesheet" href="dark/css/card.css">
+    <link rel="stylesheet" href="dark/content/home/home.css">
+    <link rel="stylesheet" href="dark/content/profil/profil.css">
+    <link rel="stylesheet" href="dark/content/acara/acara.css">
+    <link rel="stylesheet" href="dark/countdown/countdown.css">
+    <link rel="stylesheet" href="dark/content/gallery/gallery.css">
+    <link rel="stylesheet" href="dark/content/cerita/timeline.css">
+    <link rel="stylesheet" href="dark/content/cerita/cerita.css">
+    <link rel="stylesheet" href="dark/content/gift/gift.css">
+    <link rel="stylesheet" href="dark/content/ucapan/guestbook.css">
+    <link rel="stylesheet" href="dark/hashover/hashover.css">
+</head>
+<body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
+    <header>
+        <div class="popup">
+            <div class="popup-wrap">
+                <div class="popup-img"></div>
+                <p class="top-text">The Wedding Of</p>
+                <div class="popup-item">
+                    <h1 class="groom"></h1>
+                    <h1 class="h1">dan</h1>
+                    <h1 class="bride"></h1>
+                </div>
+                <div class="kepada">
+                    <h5>Dengan Hormat Mengundang:</h5>
+                    <h4 id="default"></h4>
+                </div>
+                <button id="text_popup" class="close"><h5>Buka Undangan</h5></button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar"></nav>
+    <div class="bottom-gradient"></div>
+
+    <main>
+        <article id="home"></article>
+        <article id="profil"></article>
+        <article id="acara">
+            <div class="card-container">
+                <h3>Acara</h3>
+                <div id="input-acara"></div>
+                <div class="card-wrap bottom">
+                    <div class="card">
+                        <h4>Save The Date</h4>
+                        <div class="tanggal-pemberkatan"></div>
+                        <div class="simply-countdown"></div>
+                        <div id="countdown-btn"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="galeri">
+            <h3>Galeri</h3>
+            <section class="gallery-container">
+                <div class="gallery">
+                    <div class="modal" id="myModal">
+                        <span class="close" id="closeBtn">&times;</span>
+                        <img class="modal-content" id="modalImg">
+                        <a class="prev" id="prevBtn">&#10094;</a>
+                        <a class="next" id="nextBtn">&#10095;</a>
+                    </div>
+                    <div class="thumbnails" id="thumbnails"></div>
+                </div>
+            </section>
+            <div id="video"></div>                   
+        </article>
+        <article id="cerita" class="cerita"></article>
+        <article id="gift">
+            <h3>Gift</h3>
+            <div class="card-container">
+                <div class="card-wrap">
+                    <div class="card top">
+                        <div class="gift-01"></div>
+                        <div class="gift-item">
+                          <input id="input-1" type="text" readonly class="copytext">
+                          <button class="copybtn"><h5>Copy</h5></button>
+                        </div>
+                    </div>
+                    <div class="card top">
+                        <div class="gift-02"></div>
+                        <div class="gift-item">
+                            <input id="input-2" type="text" readonly class="copytext">
+                            <button class="copybtn"><h5>Copy</h5></button>
+                        </div>
+                    </div>
+                    <div class="card top">
+                        <div class="gift-03"></div>
+                        <div class="gift-item">
+                            <input id="input-3" type="text" readonly class="copytext">
+                            <button class="copybtn"><h5>Copy</h5></button>
+                        </div>
+                    </div>
+                    <div class="card top">
+                        <div class="gift-04"></div>
+                        <div class="gift-item">
+                            <input id="input-4" type="text" readonly class="copytext">
+                            <button class="copybtn"><h5>Copy</h5></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="ucapan">
+            <h3>RSVP / Ucapan</h3>
+        </article>
+    </main>
+
+    <!-- SCRIPT -->
+    <script>
+        // Fungsi untuk mengganti nama undangan di <h4> dan mengupdate URL hash
+        function updateInvitationName(name) {
+            document.getElementById('default').textContent = name; // Menggunakan ID 'default'
+            const hash = name.replace(/\s+/g, '_'); // Mengganti spasi dengan underscore
+            window.location.hash = hash;
+        }
+
+        // Fungsi untuk membaca daftar nama dari file .txt
+        async function loadNames() {
+            const response = await fetch('dark/data-input/daftar-nama.txt'); // Pastikan file ini berada di direktori yang sama
+            const text = await response.text();
+            const names = text.split('\n').map(name => name.trim()).filter(Boolean);
+
+            // Cek apakah ada hash di URL
+            const hash = decodeURIComponent(window.location.hash.substring(1)).replace(/_/g, ' '); // Mengganti underscore dengan spasi
+            if (hash && names.includes(hash)) {
+                updateInvitationName(hash);
+            } else {
+                // Pilih nama pertama sebagai default jika tidak ada hash
+                updateInvitationName(names[0]);
+            }
+        }
+
+        // Panggil fungsi saat halaman selesai dimuat
+        window.onload = function() {
+            loadNames();
+        };
+    </script>
+    
+    <script src="dark/navbar/navbar-popup.js" defer></script>
+    <script src="dark/data-input/data-input.js"></script>
+    <script src="dark/reveal/reveal.js"></script>
+    <script src="dark/content/home/home.js"></script>
+    <script src="dark/content/profil/profil.js"></script>
+    <script src="dark/content/acara/acara.js"></script>
+    <script src="dark/countdown/simplycountdown.js"></script>
+    <script src="dark/countdown/countdown.js"></script>
+    <script src="dark/content/gallery/gallery.js" defer></script>
+    <script src="dark/content/cerita/cerita.js"></script>
+    <script src="dark/content/gift/gift.js"></script>
+    <script src="dark/content/gift/gift-icon.js"></script>
+    <script src="dark/content/ucapan/guestbook.js"></script>
+    <script src="dark/hashover/hashover.js"></script>
+    <script src="dark/copy/copy.js"></script>
+    <script src="dark/copy/alert.js"></script>
+    <script type="module" src="dark/content/ucapan/minidenticons.min.js" defer></script>
+</body>
+</html>
