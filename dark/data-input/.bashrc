@@ -1,2 +1,0 @@
-url: https://api.github.com/repos/langowanproject/langowanproject.github.io/issues
-token: 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
