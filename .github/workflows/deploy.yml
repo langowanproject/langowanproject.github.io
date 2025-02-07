@@ -1,0 +1,31 @@
+name: Deploy and Run Script
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow saat ada push ke branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Menjalankan workflow di lingkungan Ubuntu terbaru
+
+    steps:
+      # Langkah 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Menggunakan action untuk checkout kode
+
+      # Langkah 2: Setup Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3  # Menggunakan action untuk setup Node.js
+        with:
+          node-version: '18'  # Menggunakan Node.js versi 18
+
+      # Langkah 3: Install dependencies
+      - name: Install dependencies
+        run: npm install  # Menginstal dependencies dari package.json
+
+      # Langkah 4: Jalankan skrip
+      - name: Run script
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}  # Mengambil token dari GitHub Secrets
+        run: node guestbook.js  # Menjalankan skrip JavaScript Anda
