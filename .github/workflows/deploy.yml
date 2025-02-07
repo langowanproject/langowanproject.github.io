@@ -1,31 +1,27 @@
-name: Deploy and Run Guestbook Script
+name: Deploy Guestbook
 
-on:
-  push:
-    branches:
-      - main  # Trigger workflow saat ada push ke branch main
+   on:
+     push:
+       branches:
+         - main  # Jalankan workflow saat ada push ke branch main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest  # Menjalankan workflow di lingkungan Ubuntu terbaru
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
 
-    steps:
-      # Langkah 1: Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v3  # Menggunakan action untuk checkout kode
+       steps:
+         - name: Checkout repository
+           uses: actions/checkout@v3
 
-      # Langkah 2: Setup Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3  # Menggunakan action untuk setup Node.js
-        with:
-          node-version: '18'  # Menggunakan Node.js versi 18
+         - name: Set up Node.js
+           uses: actions/setup-node@v3
+           with:
+             node-version: '18'
 
-      # Langkah 3: Install dependencies (jika diperlukan)
-      - name: Install dependencies
-        run: npm install  # Menginstal dependencies dari package.json (jika ada)
+         - name: Install dependencies
+           run: npm install
 
-      # Langkah 4: Jalankan skrip guestbook.js
-      - name: Run Guestbook Script
-        env:
-          API_TOKEN: ${{ secrets.API_TOKEN }}  # Mengambil token dari GitHub Secrets
-        run: node dark/content/ucapan/guestbook.js  # Menjalankan skrip guestbook.js
+         - name: Run Guestbook Script
+           env:
+             API_TOKEN: ${{ secrets.API_TOKEN }}  # Ambil token dari GitHub Secrets
+           run: node dark/content/ucapan/guestbook.js
