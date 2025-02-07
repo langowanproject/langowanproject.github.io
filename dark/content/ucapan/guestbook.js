@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: {
-                        'Authorization': `token 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`,
+                        'Authorization': `token ${API_TOKEN}`,
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(data)
