@@ -161,7 +161,7 @@
 
         // Fungsi untuk membaca daftar nama dari file .txt
         async function loadNames() {
-            const response = await fetch('dark/data-input/daftar-nama.txt'); // Pastikan file ini berada di direktori yang sama
+            const response = await fetch('data-input/daftar-nama.txt'); // Pastikan file ini berada di direktori yang sama
             const text = await response.text();
             const names = text.split('\n').map(name => name.trim()).filter(Boolean);
 
