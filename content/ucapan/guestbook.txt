@@ -1,0 +1,2 @@
+
+{"nama":"Donny & Litha","pesan":"Selamat menempuh hidup baru! Semoga rumah tangga kalian selalu dipenuhi cinta dan kebahagiaan. Maaf ya, aku nggak bisa hadir, tapi doaku selalu untuk kalian!","kehadiran":"Tidak Hadir","timestamp":"2025-02-08T21:44:42.756Z","uniqueCode":"Donny & Litha-1739051082758","parentId":null}
