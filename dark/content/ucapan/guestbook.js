@@ -1,19 +1,17 @@
 // Fungsi untuk mengambil konfigurasi dari file token.txt
 async function fetchConfig() {
     try {
-        const response = await fetch('https://ia600609.us.archive.org/4/items/token_202502/token.txt');
+        const response = await fetch('https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt');
         if (!response.ok) {
             throw new Error('Gagal mengambil konfigurasi');
         }
         const text = await response.text();
-        const config = {};
-        text.split('\n').forEach(line => {
-            const [key, value] = line.split(': ');
-            if (key && value) {
-                config[key.trim()] = value.trim();
-            }
-        });
-        return config;
+        const [token, username, repo] = text.split('\n').map(line => line.trim());
+        return {
+            token: token,
+            username: username,
+            repo: repo
+        };
     } catch (error) {
         console.error('Error fetching config:', error);
         throw error;
@@ -78,8 +76,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     try {
         // Ambil konfigurasi dari file token.txt
         const config = await fetchConfig();
-        const API_URL = config.url;
         const API_TOKEN = config.token;
+        const repoOwner = config.username;
+        const repoName = config.repo;
+        const API_URL = `https://api.github.com/repos/${repoOwner}/${repoName}/issues`;
 
         // Kode JavaScript untuk memasukkan kode HTML
         const ucapan = `
