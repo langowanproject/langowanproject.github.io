@@ -23,6 +23,31 @@
     <link rel="stylesheet" href="dark/content/gift/gift.css">
     <link rel="stylesheet" href="dark/content/ucapan/guestbook.css">
     <link rel="stylesheet" href="dark/hashover/hashover.css">
+<style>
+        /* Tambahkan CSS loading spinner */
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #555;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .button-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+    </style>
 </head>
 <body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
     <header>
@@ -39,7 +64,12 @@
                     <h5>Dengan Hormat Mengundang:</h5>
                     <h4 id="default"></h4>
                 </div>
-                <button id="text_popup" class="close"><h5>Buka Undangan</h5></button>
+                <button id="text_popup" class="close" disabled>
+                    <div class="button-content">
+                        <div class="loading-spinner"></div>
+                        <h5 class="button-text">Buka Undangan</h5>
+                    </div>
+                </button>
             </div>
         </div>
     </header>
@@ -131,7 +161,7 @@
 
         // Fungsi untuk membaca daftar nama dari file .txt
         async function loadNames() {
-            const response = await fetch('data-input/daftar-nama.txt'); // Pastikan file ini berada di direktori yang sama
+            const response = await fetch('dark/data-input/daftar-nama.txt'); // Pastikan file ini berada di direktori yang sama
             const text = await response.text();
             const names = text.split('\n').map(name => name.trim()).filter(Boolean);
 
@@ -142,6 +172,53 @@
             } else {
                 // Pilih nama pertama sebagai default jika tidak ada hash
                 updateInvitationName(names[0]);
+            }
+        }
+
+        // Panggil fungsi saat halaman selesai dimuat
+        window.onload = function() {
+            loadNames();
+        };
+    </script>
+    
+    <script>
+        // Fungsi untuk menampilkan/menyembunyikan loading
+        function toggleLoading(show) {
+            const spinner = document.querySelector('.loading-spinner');
+            const buttonText = document.querySelector('.button-text');
+            const openButton = document.getElementById('text_popup');
+            
+            if (show) {
+                spinner.style.display = 'block';
+                buttonText.style.display = 'none';
+                openButton.disabled = true;
+            } else {
+                spinner.style.display = 'none';
+                buttonText.style.display = 'block';
+                openButton.disabled = false;
+            }
+        }
+
+        // Fungsi untuk membaca daftar nama dari file .txt
+        async function loadNames() {
+            toggleLoading(true); // Tampilkan loading
+            
+            try {
+                const response = await fetch('dark/data-input/daftar-nama.txt');
+                const text = await response.text();
+                const names = text.split('\n').map(name => name.trim()).filter(Boolean);
+
+                // Cek apakah ada hash di URL
+                const hash = decodeURIComponent(window.location.hash.substring(1)).replace(/_/g, ' ');
+                if (hash && names.includes(hash)) {
+                    updateInvitationName(hash);
+                } else {
+                    updateInvitationName(names[0]);
+                }
+            } catch (error) {
+                console.error('Error loading names:', error);
+            } finally {
+                toggleLoading(false); // Sembunyikan loading
             }
         }
 
