@@ -104,23 +104,27 @@ async function tampilkanKomentar(komentarList) {
         const komentarData = await bacaDataKomentar(API_TOKEN, repoOwner, repoName);
         komentarList.innerHTML = ""; // Hapus konten sebelumnya
 
-        komentarData.forEach(komentar => {
-            const komentarObj = JSON.parse(komentar);
+        // Parse setiap baris menjadi objek JSON dan urutkan berdasarkan timestamp
+        const komentarObjek = komentarData.map(komentar => JSON.parse(komentar));
+        komentarObjek.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)); // Urutkan dari yang terbaru
+
+        // Tampilkan komentar yang sudah diurutkan
+        komentarObjek.forEach(komentar => {
             const komentarDiv = document.createElement("div");
             komentarDiv.classList.add("post");
 
             // Tampilkan timestamp dengan format "dd, NamaBulan yyyy"
-            const timestamp = formatTimestamp(komentarObj.timestamp);
+            const timestamp = formatTimestamp(komentar.timestamp);
 
             komentarDiv.innerHTML = `
                 <section class="post-container">
-                    <minidenticon-svg username="${komentarObj.nama}"></minidenticon-svg>
+                    <minidenticon-svg username="${komentar.nama}"></minidenticon-svg>
                     <div class="post-wrap">
                         <div class="post-item">
-                            <h5 class="post-name item">${komentarObj.nama}</h5>
-                            <h6 class="post-status item"><span class="${komentarObj.kehadiran}">${komentarObj.kehadiran}</span></h6>
+                            <h5 class="post-name item">${komentar.nama}</h5>
+                            <h6 class="post-status item"><span class="${komentar.kehadiran}">${komentar.kehadiran}</span></h6>
                         </div>
-                        <p class="post-comment">${komentarObj.pesan}</p>
+                        <p class="post-comment">${komentar.pesan}</p>
                         <h6 class="post-date">${timestamp}</h6>
                     </div>
                 </section>
