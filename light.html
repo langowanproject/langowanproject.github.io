@@ -204,7 +204,7 @@
             toggleLoading(true); // Tampilkan loading
             
             try {
-                const response = await fetch('light/data-input/daftar-nama.txt');
+                const response = await fetch('data-input/daftar-nama.txt');
                 const text = await response.text();
                 const names = text.split('\n').map(name => name.trim()).filter(Boolean);
 
