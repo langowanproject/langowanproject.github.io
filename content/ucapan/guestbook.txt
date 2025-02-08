@@ -1,2 +1,3 @@
 
 {"nama":"Ucapan 001","pesan":"Ucapan Satu","kehadiran":"Tidak Hadir","timestamp":"2025-02-08T21:51:53.766Z","uniqueCode":"Ucapan 001-1739051513766","parentId":null}
+{"nama":"Ucapan 02","pesan":"Ucapan Kedua","kehadiran":"Belum Pasti","timestamp":"2025-02-08T21:52:25.872Z","uniqueCode":"Ucapan 02-1739051545872","parentId":null}
