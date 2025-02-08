@@ -25,46 +25,108 @@ function formatTimestamp(timestamp) {
     return date.toLocaleDateString('id-ID', options);
 }
 
-// Fungsi untuk menampilkan komentar
-async function tampilkanKomentar(API_URL, API_TOKEN) {
+// Fungsi untuk membaca data dari file guestbook.txt
+async function bacaDataKomentar(API_TOKEN, repoOwner, repoName) {
+    const filePath = 'content/ucapan/guestbook.txt';
+    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
+
     try {
-        const response = await fetch(API_URL, {
-            method: 'GET',
+        const response = await fetch(url, {
             headers: {
                 'Authorization': `token ${API_TOKEN}`
             }
         });
         if (!response.ok) {
-            throw new Error('Gagal mengambil komentar');
+            throw new Error('Gagal membaca data komentar');
         }
         const data = await response.json();
-        const komentarList = document.getElementById("komentar-list");
+        const content = atob(data.content); // Decode base64 content
+        return content.split('\n').filter(line => line.trim() !== ""); // Filter baris kosong
+    } catch (error) {
+        console.error('Error reading comments:', error);
+        throw error;
+    }
+}
+
+// Fungsi untuk menulis data ke file guestbook.txt
+async function tulisDataKomentar(API_TOKEN, repoOwner, repoName, dataBaru) {
+    const filePath = 'content/ucapan/guestbook.txt';
+    const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
+
+    try {
+        // Ambil data saat ini untuk mendapatkan SHA
+        const response = await fetch(url, {
+            headers: {
+                'Authorization': `token ${API_TOKEN}`
+            }
+        });
+        if (!response.ok) {
+            throw new Error('Gagal mengambil data saat ini');
+        }
+        const data = await response.json();
+        const sha = data.sha;
+
+        // Tambahkan data baru ke konten yang ada
+        const content = atob(data.content); // Decode base64 content
+        const newContent = content + '\n' + dataBaru;
+
+        // Kirim pembaruan ke GitHub
+        const updateResponse = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${API_TOKEN}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: 'Menambahkan komentar baru',
+                content: btoa(newContent), // Encode ke base64
+                sha: sha
+            })
+        });
+
+        if (!updateResponse.ok) {
+            throw new Error('Gagal menulis data komentar');
+        }
+    } catch (error) {
+        console.error('Error writing comments:', error);
+        throw error;
+    }
+}
+
+// Fungsi untuk menampilkan komentar
+async function tampilkanKomentar(komentarList) {
+    try {
+        const config = await fetchConfig();
+        const API_TOKEN = config.token;
+        const repoOwner = config.username;
+        const repoName = config.repo;
+
+        const komentarData = await bacaDataKomentar(API_TOKEN, repoOwner, repoName);
         komentarList.innerHTML = ""; // Hapus konten sebelumnya
 
-        data.forEach(issue => {
-            const komentar = document.createElement("div");
-            komentar.classList.add("post");
-
-            const komentarData = JSON.parse(issue.body);
+        komentarData.forEach(komentar => {
+            const komentarObj = JSON.parse(komentar);
+            const komentarDiv = document.createElement("div");
+            komentarDiv.classList.add("post");
 
             // Tampilkan timestamp dengan format "dd, NamaBulan yyyy"
-            const timestamp = formatTimestamp(komentarData.timestamp);
+            const timestamp = formatTimestamp(komentarObj.timestamp);
 
-            komentar.innerHTML = `
+            komentarDiv.innerHTML = `
                 <section class="post-container">
-                    <minidenticon-svg username="${komentarData.nama}"></minidenticon-svg>
+                    <minidenticon-svg username="${komentarObj.nama}"></minidenticon-svg>
                     <div class="post-wrap">
                         <div class="post-item">
-                            <h5 class="post-name item">${komentarData.nama}</h5>
-                            <h6 class="post-status item"><span class="${komentarData.kehadiran}">${komentarData.kehadiran}</span></h6>
+                            <h5 class="post-name item">${komentarObj.nama}</h5>
+                            <h6 class="post-status item"><span class="${komentarObj.kehadiran}">${komentarObj.kehadiran}</span></h6>
                         </div>
-                        <p class="post-comment">${komentarData.pesan}</p>
+                        <p class="post-comment">${komentarObj.pesan}</p>
                         <h6 class="post-date">${timestamp}</h6>
                     </div>
                 </section>
             `;
 
-            komentarList.appendChild(komentar);
+            komentarList.appendChild(komentarDiv);
         });
     } catch (error) {
         console.error('Error displaying comments:', error);
@@ -74,13 +136,6 @@ async function tampilkanKomentar(API_URL, API_TOKEN) {
 
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        // Ambil konfigurasi dari file token.txt
-        const config = await fetchConfig();
-        const API_TOKEN = config.token;
-        const repoOwner = config.username;
-        const repoName = config.repo;
-        const API_URL = `https://api.github.com/repos/${repoOwner}/${repoName}/issues`;
-
         // Kode JavaScript untuk memasukkan kode HTML
         const ucapan = `
             <h3>RSVP</h3>
@@ -102,7 +157,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.getElementById('ucapan').innerHTML = ucapan;
 
         // Panggil fungsi untuk menampilkan komentar saat halaman dimuat
-        tampilkanKomentar(API_URL, API_TOKEN);
+        const komentarList = document.getElementById("komentar-list");
+        tampilkanKomentar(komentarList);
 
         // Tambahkan event listener untuk mengirim data dan memperbarui komentar saat formulir disubmit
         const form = document.getElementById("guestbook-form");
@@ -122,34 +178,26 @@ document.addEventListener("DOMContentLoaded", async function () {
             const timestamp = new Date().toISOString();
             const uniqueCode = nama + "-" + timestamp;
 
-            const data = {
-                title: `Pesan dari ${nama} - ${timestamp}`,
-                body: JSON.stringify({
-                    nama: nama,
-                    pesan: pesan,
-                    kehadiran: kehadiran,
-                    timestamp: timestamp,
-                    uniqueCode: uniqueCode
-                })
-            };
+            const data = JSON.stringify({
+                nama: nama,
+                pesan: pesan,
+                kehadiran: kehadiran,
+                timestamp: timestamp,
+                uniqueCode: uniqueCode
+            });
 
             try {
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `token ${API_TOKEN}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-                if (!response.ok) {
-                    throw new Error('Gagal mengirim pesan');
-                }
+                const config = await fetchConfig();
+                const API_TOKEN = config.token;
+                const repoOwner = config.username;
+                const repoName = config.repo;
+
+                await tulisDataKomentar(API_TOKEN, repoOwner, repoName, data);
                 alert("Pesan berhasil dikirim ke buku tamu!");
                 document.getElementById("nama").value = "";
                 document.getElementById("pesan").value = "";
                 document.getElementById("kehadiran").value = ""; // Reset kehadiran ke default
-                tampilkanKomentar(API_URL, API_TOKEN);
+                tampilkanKomentar(komentarList); // Perbarui tampilan komentar
             } catch (error) {
                 console.error('Error submitting form:', error);
                 alert("Terjadi kesalahan. Silakan coba lagi.");
