@@ -140,6 +140,14 @@
             background-color: #c0392b;
         }
 
+        button.view-button {
+            background-color: #27ae60;
+        }
+
+        button.view-button:hover {
+            background-color: #219653;
+        }
+
         button:hover {
             background-color: #2980b9;
             transform: translateY(-1px);
@@ -268,10 +276,17 @@
                 shareButton.textContent = 'Share';
                 shareButton.addEventListener('click', () => shareURL(name, fullURL));
 
+                // Tombol Lihat Undangan
+                const viewButton = document.createElement('button');
+                viewButton.textContent = 'Lihat Undangan';
+                viewButton.className = 'view-button';
+                viewButton.addEventListener('click', () => window.open(fullURL, '_blank'));
+
                 // Susun Elemen
                 container.appendChild(input);
                 container.appendChild(copyButton);
                 container.appendChild(shareButton);
+                container.appendChild(viewButton); // Tambahkan tombol Lihat Undangan di bawah tombol Share
                 urlCell.appendChild(container);
 
                 // Kolom Aksi (Hapus)
@@ -419,4 +434,3 @@
     </script>
 </body>
 </html>
-
