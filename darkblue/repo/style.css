@@ -72,6 +72,7 @@ h2{
 
 h3{
     font-size: clamp(0.8rem, min(6.65vw, 6.65vh), 2.5rem);
+    color: var(--color-D);
 }
 
 h4{

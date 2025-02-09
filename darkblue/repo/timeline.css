@@ -6,6 +6,10 @@
   padding-bottom: 5vh;
 }
 
+.timeline h3{
+    color: var(--color-A);
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline::after{
   content: '';
