@@ -1,6 +1,7 @@
 title: Romeo & Juliet
 
 ========== "DATA" ==========
+
 token: https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt
 
 tanggal-acara: Selasa, 12 Agustus 2024
@@ -14,6 +15,16 @@ alamat-groom: Langowan
 bride: Juliet Capulet
 biodata-bride: Anak ketiga dari Bapak Ipsum dan Ibu Lorem
 alamat-bride: Tondano
+
+("QUOTES 01")
+judul-quotes1: One Love United in Christ
+quotes1: "Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging."
+sumber-quotes1: Kejadian 2 ∶ 24
+
+("QUOTES 02")
+judul-quotes2: 
+quotes2: "Have a good and godly marriage that shows the world Christ's love through how you sacrificially love and serve one another."
+sumber-quotes2: —John Stange
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
