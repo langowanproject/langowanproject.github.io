@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="card-container">
         <div class="card-wrap">
             <div class="card bottom">
-                <h4>One Love United in Christ</h4>
-                <p>"Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging."</p>
-                <h5>Kejadian 2 : 24</h5>
+                <h4 class="judul-quotes1"></h4>
+                <p class="quotes1"></p>
+                <h5 class="sumber-quotes1"></h5>
             </div>
         </div>
         <div class="card-wrap">
@@ -32,8 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="card-wrap">
             <div class="card bottom">
-                <p>"Have a good and godly marriage that shows the world Christ's love through how you sacrificially love and serve one another."</p>
-                <h5>—John Stange</h5>
+                <h4 class="judul-quotes2"></h4>
+                <p class="quotes2"></p>
+                <h5 class="sumber-quotes2"></h5>
             </div>
         </div>
     </div>
