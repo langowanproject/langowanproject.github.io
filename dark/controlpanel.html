@@ -185,13 +185,17 @@
         .gbtn {
             margin: 20px;
             padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
         
         .gbtn a {
             text-decoration: none;
             color: white;
         }
-        
     </style>
 </head>
 <body>
@@ -318,16 +322,28 @@
                 container.appendChild(input);
                 container.appendChild(copyButton);
                 container.appendChild(shareButton);
-                container.appendChild(viewButton); // Tambahkan tombol Lihat Undangan di bawah tombol Share
+                container.appendChild(viewButton);
                 urlCell.appendChild(container);
 
                 // Kolom Aksi (Hapus)
                 const actionCell = document.createElement('td');
-                const deleteButton = document.createElement('button');
-                deleteButton.textContent = 'Hapus';
-                deleteButton.className = 'delete-button';
-                deleteButton.addEventListener('click', () => deleteName(name));
-                actionCell.appendChild(deleteButton);
+
+                // Hanya tambahkan tombol hapus jika bukan nama pertama
+                if (index !== 0) {
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Hapus';
+                    deleteButton.className = 'delete-button';
+                    
+                    // Tambahkan konfirmasi hapus
+                    deleteButton.addEventListener('click', () => {
+                        const konfirmasi = confirm(`Apakah Anda yakin ingin menghapus "${name}"?`);
+                        if (konfirmasi) {
+                            deleteName(name);
+                        }
+                    });
+                    
+                    actionCell.appendChild(deleteButton);
+                }
 
                 // Tambahkan ke baris
                 tr.appendChild(numberCell);
