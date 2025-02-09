@@ -249,7 +249,7 @@
                                 <div class="post-item">
                                     <h5 class="post-name item">${komentar.nama}</h5>
                                     <h6 class="post-status item"><span class="${komentar.kehadiran}">${komentar.kehadiran}</span></h6>
-                                    <button class="delete-btn" onclick="hapusKomentarHandler('${komentarEncoded}')">Hapus</button>
+                                    <button class="delete-btn" onclick="konfirmasiHapus('${komentarEncoded}')">Hapus</button>
                                 </div>
                                 <p class="post-comment">${komentar.pesan}</p>
                                 <h6 class="post-date">${timestamp}</h6>
@@ -264,6 +264,14 @@
                 alert('Terjadi kesalahan saat menampilkan komentar');
             }
         }
+
+        // Fungsi untuk menampilkan konfirmasi hapus
+        window.konfirmasiHapus = (komentarStr) => {
+            const konfirmasi = confirm("Apakah Anda yakin ingin menghapus komentar ini?");
+            if (konfirmasi) {
+                hapusKomentarHandler(komentarStr);
+            }
+        };
 
         // Handler untuk tombol hapus
         window.hapusKomentarHandler = async (komentarStr) => {
