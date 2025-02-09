@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card-wrap">
             <div class="card left">
                 <p class="icon-acara">a</p>
-                <h4>Pemberkatan Nikah</h4>
+                <h4 class="nama-acara1"></h4>
                 <p class="tanggal-pemberkatan"></p>
                 <p class="waktu-pemberkatan"></p>
                 <div class="item-acara">
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="card right">
                 <p class="icon-acara">b</p>
-                <h4>Resepsi Pernikahan</h4>
+                <h4 class="nama-acara2"></h4>
                 <p class="tanggal-resepsi"></p>
                 <p class="waktu-resepsi"></p>
                 <div class="item-acara">
