@@ -327,19 +327,23 @@
 
                 // Kolom Aksi (Hapus)
                 const actionCell = document.createElement('td');
-                const deleteButton = document.createElement('button');
-                deleteButton.textContent = 'Hapus';
-                deleteButton.className = 'delete-button';
-                
-                // Tambahkan konfirmasi hapus
-                deleteButton.addEventListener('click', () => {
-                    const konfirmasi = confirm(`Apakah Anda yakin ingin menghapus "${name}"?`);
-                    if (konfirmasi) {
-                        deleteName(name);
-                    }
-                });
-                
-                actionCell.appendChild(deleteButton);
+
+                // Hanya tambahkan tombol hapus jika bukan nama pertama
+                if (index !== 0) {
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Hapus';
+                    deleteButton.className = 'delete-button';
+                    
+                    // Tambahkan konfirmasi hapus
+                    deleteButton.addEventListener('click', () => {
+                        const konfirmasi = confirm(`Apakah Anda yakin ingin menghapus "${name}"?`);
+                        if (konfirmasi) {
+                            deleteName(name);
+                        }
+                    });
+                    
+                    actionCell.appendChild(deleteButton);
+                }
 
                 // Tambahkan ke baris
                 tr.appendChild(numberCell);
