@@ -27,12 +27,12 @@ sumber-quotes2: —John Stange
 ========== PEMBERKATAN DAN RESEPSI ==========
 
 nama-acara1: Pemberkatan Nikah
-tanggal-pemberkatan: Selasa, 12 Agustus 2025
+tanggal-pemberkatan: Selasa, 12 Agustus 2026
 waktu-pemberkatan: Pukul 12.00 Wita
 tempat-pemberkatan: GMIM Imanuel Leilem
 
 nama-acara2: Resepsi Pernikahan
-tanggal-resepsi: Selasa, 12 Agustus 2025
+tanggal-resepsi: Selasa, 12 Agustus 2026
 waktu-resepsi: Pukul 16.00 Wita
 tempat-resepsi: Four Points by Sheraton Manado
 
