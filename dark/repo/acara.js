@@ -5,24 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card left">
                 <p class="icon-acara">a</p>
                 <h4 class="nama-acara1"></h4>
-                <p class="tanggal-pemberkatan"></p>
-                <p class="waktu-pemberkatan"></p>
+                <p class="tanggal-acara1"></p>
+                <p class="waktu-acara1"></p>
                 <div class="item-acara">
                     <h5 class="icon">c</h5>
-                    <h5 class="tempat-pemberkatan"></h5>
+                    <h5 class="tempat-acara1"></h5>
                 </div>
-                <button type="button" id="button-pemberkatan"><h5>Detail Lokasi</h5></button>
+                <button type="button" id="button-acara1"><h5>Detail Lokasi</h5></button>
             </div>
             <div class="card right">
                 <p class="icon-acara">b</p>
                 <h4 class="nama-acara2"></h4>
-                <p class="tanggal-resepsi"></p>
-                <p class="waktu-resepsi"></p>
+                <p class="tanggal-acara2"></p>
+                <p class="waktu-acara2"></p>
                 <div class="item-acara">
                     <h5 class="icon">c</h5>
-                    <h5 class="tempat-resepsi"></h5>
+                    <h5 class="tempat-acara2"></h5>
                 </div>
-                <button type="button" id="button-resepsi"><h5>Detail Lokasi</h5></button>
+                <button type="button" id="button-acara2"><h5>Detail Lokasi</h5></button>
             </div>
         </div>
     `;
@@ -56,31 +56,31 @@ document.addEventListener("DOMContentLoaded", function () {
             // Memasukkan URL ke tombol pemberkatan
             if (urls.length > 0) {
                 const urlToOpen = urls[0];
-                const buttonPemberkatan = document.getElementById('button-pemberkatan');
-                if (buttonPemberkatan) {
-                    buttonPemberkatan.addEventListener("click", function () {
-                        window.open(urlToOpen, "_blank");
+                const buttonAcara1 = document.getElementById('button-acara1');
+                if (buttonAcara1) {
+                    buttonAcara1.addEventListener("click", function () {
+                        window.open(urlToOpen, "_blank");true
                     });
                 } else {
-                    console.error("Tombol pemberkatan tidak ditemukan.");
+                    console.error("Tombol acara 1 tidak ditemukan.");
                 }
             } else {
-                console.error("URL pemberkatan tidak ditemukan.");
+                console.error("URL acara 1 tidak ditemukan.");
             }
 
             // Memasukkan URL ke tombol resepsi
             if (urls.length > 1) {
                 const urlToOpen = urls[1];
-                const buttonResepsi = document.getElementById('button-resepsi');
-                if (buttonResepsi) {
-                    buttonResepsi.addEventListener("click", function () {
+                const buttonAcara2 = document.getElementById('button-acara2');
+                if (buttonAcara2) {
+                    buttonAcara2.addEventListener("click", function () {
                         window.open(urlToOpen, "_blank");
                     });
                 } else {
-                    console.error("Tombol resepsi tidak ditemukan.");
+                    console.error("Tombol acara 2 tidak ditemukan.");
                 }
             } else {
-                console.error("URL resepsi tidak ditemukan.");
+                console.error("URL acara 2 tidak ditemukan.");
             }
 
             // Memasukkan URL ke tombol kalender
