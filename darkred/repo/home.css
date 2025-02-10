@@ -48,8 +48,8 @@
 
 .home-content-1{
     margin: min(3vw, 3vh);
-    color: var(--color-A);
-    text-shadow: 0px -0.08vh 1vh var(--color-D);
+    color: var(--color-D);
+    text-shadow: 0px -0.08vh 1vh var(--color-A);
 }
 
 .home-content p{

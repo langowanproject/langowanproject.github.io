@@ -104,8 +104,8 @@
 
   .popup-item h1{
     font-size: clamp(1rem, min(8vw, 8vh), 3rem);
-    color: var(--color-A);
-    text-shadow: 0px -0.08vh 1vh var(--color-D);
+    color: var(--color-D);
+    text-shadow: 0px -0.08vh 1vh var(--color-A);
   }
   
   .kepada {

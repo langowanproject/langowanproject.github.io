@@ -7,14 +7,14 @@
     --profil-bride: url(../assets/bride.webp);
 
   /*========== COLOR ==========*/
-    --h: 0;
+    --h: 1.59deg;
     --s_A: 0%;
-    --s_B: 100%;
+    --s_B: 90.40%;
     --l_A: 90%; /* Warna teks utama lebih terang */
     --l_B: 20%; /* Latar belakang lebih gelap */
     --l_C: 10%; /* Warna artikel lebih gelap */
     --l_D: 40%; /* Warna tombol utama */
-    --l_E: 50%; /* Warna teks tombol */
+    --l_E: 75.49%; /* Warna teks tombol */
     --l_F: 100%; /* Warna hover lebih terang */
     --color-A: hsl(var(--h), var(--s_A), var(--l_A));
     --color-B: hsl(var(--h), var(--s_A), var(--l_B));
