@@ -47,6 +47,8 @@ url-3: kalender.html
 
 ========== "GALLERY" ==========
 
+gambar: assets/001.webp,  assets/002.webp, assets/003.webp, assets/004.webp, assets/005.webp, assets/006.webp, assets/007.webp, assets/008.webp
+
 alamat url video
 url-video: https://ia903401.us.archive.org/23/items/wedding-video_202502/wedding-video.mp4
 
@@ -78,4 +80,3 @@ gift-01: ../assets/01.svg
 gift-02: ../assets/02.svg
 gift-03: ../assets/03.svg
 gift-04: ../assets/04.svg
-
