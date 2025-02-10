@@ -50,15 +50,15 @@
         const data = await fetchData();
         if (!data) return;
 
-        const pemberkatanDate = parseDate(data["tanggal-pemberkatan"]);
-        const pemberkatanTime = parseTime(data["waktu-pemberkatan"]);
+        const acara1Date = parseDate(data["tanggal-acara1"]);
+        const acara1Time = parseTime(data["waktu-acara1"]);
 
         simplyCountdown('.simply-countdown', { 
-            year: pemberkatanDate.year, 
-            month: pemberkatanDate.month, 
-            day: pemberkatanDate.date, 
-            hours: pemberkatanTime.hours, 
-            minutes: pemberkatanTime.minutes, 
+            year: acara1Date.year, 
+            month: acara1Date.month, 
+            day: acara1Date.date, 
+            hours: acara1Time.hours, 
+            minutes: acara1Time.minutes, 
             words: { 
                 days: { singular: 'hari', plural: 'hari' },
                 hours: { singular: 'jam', plural: 'jam' },
