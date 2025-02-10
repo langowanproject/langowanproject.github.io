@@ -8,7 +8,7 @@
 
   /*========== COLOR ==========*/
     --h: 200;
-    --s_A: 60%;
+    --s_A: 0%;
     --s_B: 100%;
     --l_A: 0%;
     --l_B: 80%;
@@ -17,10 +17,10 @@
     --l_E: 40%;
     --l_F: 100%;
     --color-A: hsl(var(--h), var(--s_A), var(--l_A));
-    --color-B: hsl(var(--h), var(--s_B), var(--l_B));
-    --color-C: hsl(var(--h), var(--s_B), var(--l_C));
-    --color-D: hsl(var(--h), var(--s_B), var(--l_E));
-    --color-E: hsl(var(--h), var(--s_B), var(--l_F));
+    --color-B: hsl(var(--h), var(--s_A), var(--l_B));
+    --color-C: hsl(var(--h), var(--s_A), var(--l_C));
+    --color-D: hsl(var(--h), var(--s_A), var(--l_E));
+    --color-E: hsl(var(--h), var(--s_A), var(--l_F));
   }
 
 @font-face{
@@ -72,7 +72,6 @@ h2{
 
 h3{
     font-size: clamp(0.8rem, min(6.65vw, 6.65vh), 2.5rem);
-    color: var(--color-D);
 }
 
 h4{
@@ -128,10 +127,6 @@ button:hover{
 #gift, #ucapan{
     background-color: hsla(var(--h), var(--s_A), var(--l_B), 0.8);
     height: 100%;
-}
-
-.timeline h3{
-    color: white;
 }
 
 video {

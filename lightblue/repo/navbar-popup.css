@@ -104,7 +104,6 @@
 
   .popup-item h1{
     font-size: clamp(1rem, min(8vw, 8vh), 3rem);
-    color: var(--color-D);
   }
   
   .kepada {
@@ -143,7 +142,7 @@
 
   .active{
     cursor: pointer;
-    color: var(--color-D);
+    color: var(--color-A);
     transition: 0.2s ease-out;
 }
 

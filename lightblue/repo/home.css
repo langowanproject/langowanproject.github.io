@@ -30,7 +30,7 @@
     align-items: center;
     border-radius: min(2vw, 2vh);
     padding: min(8vw, 8vh) 0;
-    color: var(--color-D);
+    color: var(--color-A);
 }
   
 .home-background{
@@ -47,8 +47,8 @@
 
 .home-content-1{
     margin: min(3vw, 3vh);
-    color: var(--color-C);
-    text-shadow: 0px -0.08vh 1vh var(--color-D);
+    color: var(--color-A);
+    /* text-shadow: 0px -0.08vh 1vh var(--color-D); */
 }
 
 .home-content p{
@@ -57,14 +57,14 @@
 }
 
 .home-content-2{
-    color: var(--color-D);
+    color: var(--color-A);
     /* text-shadow: 0px -0.08vh 1vh var(--color-D); */
 }
 
 .line{
     width: clamp(7rem, min(56vw, 56vh), 21rem);
     height: clamp(0.071rem, min(0.57vw, 0.57vh), 0.21rem);
-    background-color: var(--color-D);
+    background-color: var(--color-A);
     /* box-shadow: 0px -0.08vh 1vh var(--color-D); */
     margin: min(3vw, 3vh);
 }
