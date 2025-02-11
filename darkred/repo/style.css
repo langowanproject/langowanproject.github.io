@@ -1,20 +1,20 @@
 :root{
-    --background-1: url(../assets/001.webp);
-    --background-2: url(../assets/002.webp);
-    --background-3: url(../assets/003.webp);
+    --background-1: url(../assets/008.webp);
+    --background-2: url(../assets/003.webp);
+    --background-3: url(../assets/006.webp);
   
     --profil-groom: url(../assets/groom.webp);
     --profil-bride: url(../assets/bride.webp);
 
   /*========== COLOR ==========*/
-    --h: 1.59deg;
+    --h: 0;
     --s_A: 0%;
-    --s_B: 90.40%;
+    --s_B: 100%;
     --l_A: 90%; /* Warna teks utama lebih terang */
     --l_B: 20%; /* Latar belakang lebih gelap */
     --l_C: 10%; /* Warna artikel lebih gelap */
     --l_D: 40%; /* Warna tombol utama */
-    --l_E: 75.49%; /* Warna teks tombol */
+    --l_E: 50%; /* Warna teks tombol */
     --l_F: 100%; /* Warna hover lebih terang */
     --color-A: hsl(var(--h), var(--s_A), var(--l_A));
     --color-B: hsl(var(--h), var(--s_A), var(--l_B));
