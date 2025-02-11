@@ -1,0 +1,134 @@
+:root{
+    --background-1: url(../assets/005.webp);
+    --background-2: url(../assets/008.webp);
+    --background-3: url(../assets/007.webp);
+  
+    --profil-groom: url(../assets/groom.webp);
+    --profil-bride: url(../assets/bride.webp);
+
+  /*========== COLOR ==========*/
+    --h: 0;
+    --s_A: 30%;
+    --s_B: 100%;
+    --l_A: 90%; /* Warna teks utama lebih terang */
+    --l_B: 20%; /* Latar belakang lebih gelap */
+    --l_C: 10%; /* Warna artikel lebih gelap */
+    --l_D: 40%; /* Warna tombol utama */
+    --l_E: 25%; /* Warna teks tombol */
+    --l_F: 100%; /* Warna hover lebih terang */
+    --color-A: hsl(var(--h), var(--s_A), var(--l_A));
+    --color-B: hsl(var(--h), var(--s_A), var(--l_B));
+    --color-C: hsl(var(--h), var(--s_B), var(--l_C));
+    --color-D: hsl(var(--h), var(--s_B), var(--l_E));
+    --color-E: hsl(var(--h), var(--s_B), var(--l_F));
+  }
+
+@font-face{
+    font-family: icon;
+    src: url(../assets/icons.ttf);
+}  
+
+@font-face{
+    font-family: font-1;
+    src: url(../assets/greatvibes.ttf);
+}
+
+@font-face{
+    font-family: font-2;
+    src: url(../assets/caveat.ttf);
+}
+
+@font-face{
+    font-family: font-3;
+    src: url(../assets/crimsontext.ttf);
+}
+
+h1, .h1{
+    font-family: font-1;
+}
+
+h1{
+    font-size: clamp(1.5rem, min(12vw, 12vh), 4.5rem);
+}
+
+.h1{
+    font-size: clamp(0.8rem, min(6.65vw, 6.65vh), 2.5rem);
+}
+
+h2, h3, h4{
+    font-family: font-2;
+    font-weight: bold;
+    margin: min(1vw, 1vh) 0;
+}
+
+h5, h6{
+    font-family: font-3, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+h2{
+    font-size: clamp(1rem, min(8vw, 8vh), 3rem);
+}
+
+h3{
+    font-size: clamp(0.8rem, min(6.65vw, 6.65vh), 2.5rem);
+}
+
+h4{
+    font-size: clamp(0.66rem, min(5.33vw, 5.33vh), 2rem);
+}
+
+h5{
+    font-size: clamp(0.5rem, min(4vw, 4vh), 1.5rem);
+    margin: min(1vw, 1vh) 0;
+}
+
+h6{
+    font-size: clamp(0.33rem, min(2.66vw, 2.66vh), 1rem);
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.5rem, min(4vw, 4vh), 1.5rem);
+}
+
+.icon{
+    font-family: icon;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+article{
+    background-color: var(--color-C);
+    color: var(--color-A);
+    text-align: center;
+}
+
+button{
+    margin: min(2vw, 2vh);
+    background-color: var(--color-D);
+    color: var(--color-E);
+    border-radius: min(2vw, 2vh);
+    border: none;
+    padding: min(0.5vw, 0.5vh) min(3vw, 3vh);
+}
+
+button:hover{
+    background-color: var(--color-A);
+    color: var(--color-B);
+}
+
+#cerita{
+    margin-bottom: 0;
+}
+
+#gift, #ucapan{
+    background-color: hsla(var(--h), var(--s_A), var(--l_B), 1);
+    height: 100%;
+}
+
+video {
+    margin-bottom: 70px;
+}
