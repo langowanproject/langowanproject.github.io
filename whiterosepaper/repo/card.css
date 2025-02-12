@@ -1,0 +1,91 @@
+.card-container{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:1rem 1rem;
+   background-color: #f5f5f5;
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+
+.card-container2{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:1rem 1rem;
+}
+
+.card-wrap{
+   margin: 5vh;
+}
+
+.card-container .card-wrap{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   gap:2rem;
+}
+
+/*#gift .card-container .card-wrap{
+   grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+}*/
+
+.card-container .card-wrap .card,
+.card-container .card-wrap .card1,
+.card-container .card-wrap .card2,
+.card-container .card-wrap .card3,
+.card-container .card-wrap .card4,
+.card-container .card-wrap .card5
+ {
+   text-align: center;
+   padding:3rem 2rem;
+   background: var(--color-E);
+   border-radius: min(2vw, 2vh);
+   box-shadow: 0 0 min(1vw, 1vh) hsla(var(--h), var(--s_A), var(--l_A), 0.4);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.card-container .card-wrap .card-video {
+   text-align: center;
+   padding:10px 0;   
+   background: var(--color-E);
+   border-radius: min(2vw, 2vh);
+   box-shadow: 0 0 min(1vw, 1vh) hsla(var(--h), var(--s_A), var(--l_A), 0.4);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.card-container .card-wrap .card1 {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;    
+}
+
+.card-container .card-wrap .card2 {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.card-container .card-wrap .card3 {
+    border-radius: 20%;
+}
+
+.card-container .card-wrap .card4 {
+    border-radius: min(2vw, 2vh) 50%;
+}
+
+.card-container .card-wrap .card5 {
+    border-radius: 50% min(2vw, 2vh);
+}
+
+
+.card-container .card-wrap .card .box{
+   height: 10rem;
+   width: 10rem
+}
+
+.box{
+   background-color: #444;
+   border-radius: min(2vw, 2vh);
+}
