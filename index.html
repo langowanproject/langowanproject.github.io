@@ -1,277 +1,536 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<title>Langowan Project - Undangan Digital</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<style>
+  /* Variabel Warna */
+  :root {
+    --primary-color: #1ABC9C;       /* Warna utama */
+    --primary-dark: #16A085;        /* Warna utama gelap */
+    --secondary-color: #F1C40F;     /* Warna sekunder */
+    --neutral-light: #FFFFFF;       /* Warna netral terang */
+    --neutral-dark: #34495E;        /* Warna netral gelap */
+    --accent-color: #E74C3C;        /* Warna aksen */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Warna shadow */
+  }
+
+  /* Global Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Header */
+  .header {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--neutral-light);
+  }
+
+  /* Navbar */
+  .navbar {
+    background-color: var(--neutral-dark);
+    box-shadow: 0 2px 4px var(--shadow-color);
+  }
+
+  /* Navbar Toggle Button */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    padding: 0 1.5rem 0 0;
+  }
+
+  .navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--neutral-light);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-toggler-icon::before {
+    top: 6px;
+  }
+
+  .navbar-toggler-icon::after {
+    bottom: 6px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 11px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    bottom: 11px;
+  }
+
+  /* Card */
+  .card {
+    background-color: var(--neutral-light);
+    border: 1px solid var(--neutral-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+
+  /* Button */
+  .whatsapp-button {
+    background-color: var(--primary-color);
+    color: var(--neutral-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .whatsapp-button:hover {
+    background-color: var(--primary-dark);
+  }
+
+  .btn-primary {
+    background-color: var(--primary-color);
+    border: 0;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: var(--neutral-dark);
+    color: var(--neutral-light);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+
+  /* Image Wrapper */
+  .imgwrap {
+    display: flex;
+    gap: 10px;
+    height: 300px;
+  }
+
+  .boximg1 {
+    flex: 1;
+    height: 100%;
+  }
+
+  .boximg1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .imgwrap-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .boximg2 {
+    flex: 1;
+    height: calc(33.33% - 7px);
+  }
+
+  .boximg2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Pagination */
+  .pagination {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .pagination .page-item {
+    margin: 0 2px;
+  }
+
+  .pagination .page-item .page-link {
+    color: var(--primary-color);
+    background-color: var(--neutral-light);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+  }
+
+  .pagination .page-item .page-link:hover {
+    color: var(--neutral-light);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  .pagination .page-item.active .page-link {
+    color: var(--neutral-light);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  .pagination .page-item.disabled .page-link {
+    color: #CCCCCC;
+    background-color: #F4F4F4;
+    border-color: #CCCCCC;
+  }
+
+  .pagination .page-item.ellipsis .page-link {
+    pointer-events: none;
+    border: none;
+    background-color: transparent;
+    color: #000;
+  }
+</style>
 </head>
 <body>
-
+<!-- Header -->
 <div class="header">
-  <h1 class="nama">&lt;/p></h1>
-  <h1>LANGOWAN  PROJECT</h1>
-  <p>Keren - Lengkap - Terjangkau</p>
+	<h1 class="display-4">LANGOWAN PROJECT</h1>
+	<p class="lead">By Samuel</p>
 </div>
-
-<div class="navbar">
-  <a href="#1">Beranda</a>
-  <a href="#2">Tema Undangan</a>
-  <a href="#3" class="right">Kontak</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#3">Hubungi Kami</a>
+	<!-- Tombol Toggle -->
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Menu Navbar -->
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav ms-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#1">Beranda</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#2">Tema Undangan</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#3">Kontak</a>
+			</li>
+		</ul>
+	</div>
 </div>
-
-<div class="row">
-  <div class="side">
-    <h2 id="1">Undangan Pernikahan Digital yang Menawan Hanya di Langowan Project</h2>
-    <ol>
-        <li>Undangan Tersedia Selamanya – Tak Pernah Kadaluarsa!</li>
-        <li>Unlimited nama tamu undangan - Nama tamu tidak terbatas jadi bisa diisi sepuasnya!</li>
-        <li>Desain Elegan & Minimalis – Tanpa Kesan Norak!</li>
-        <li>Bebas Pilih Lagu - Pilih lagu semaunya.. sepuasnya!!!</li>
-        <li>Fitur RSVP & Ucapan Gratis – Mudah Dikelola!</li>
-        <li>Harga Terjangkau – Hemat Budget Tanpa Kurang Kualitas!</li>
-        <li>Konsultasi Gratis – Kami Bantu Wujudkan Undangan Impianmu!</li>
-    </ol>
-    <h3>Yuk, buat undangan pernikahan digital custom yang unik dan berkesan hanya di Langowan Project! Cukup hubungi kami di WhatsApp, dan kami siap membantu.</h5>
-    
-    <a href="https://wa.me/6285143731606" target="_blank" class="whatsapp-button">
-    📲 Hubungi Kami di WhatsApp
-    </a>
-    
-    <p>Jangan tunggu lama, buat undanganmu spesial bersama kami!</p>
-  </div>
-  
-  <div class="main">
-     <section class="harga">
-    <h2>💰 HARGA TERJANGKAU, KUALITAS PREMIUM! 💰</h2>
-    <h3>Cukup <span style="color: #1abc9c; font-weight: bold;">Rp 60.000</span>, Anda Mendapatkan:</h3>
-    <ul>
-        <li><strong>✅ Undangan Digital Selamanya</strong> – Tidak pernah kadaluarsa!</li>
-        <li><strong>✅ Unlimited Nama Tamu Undangan</strong> – Bebas sepuasnya memasukkan nama tamu undangan.. Sepuasnya Tanpa Batas!!!</li>
-        <li><strong>✅ Desain Elegan & Minimalis</strong> – Tampilan mewah tanpa kesan norak.</li>
-        <li><strong>✅ Bebas Pilih Lagu</strong> – Pilih lagu untuk backsound undangan semaunya, sepuasnya!...</li>
-        <li><strong>✅ Tata Letak Rapi & Profesional</strong> – Tidak ada elemen yang berantakan seperti di platform lain.</li>
-        <li><strong>✅ Akses Fleksibel di Semua Perangkat</strong> – Bisa dilihat kapan saja, di mana saja!</li>
-    </ul>
-    <p style="font-size: 18px; font-weight: bold; text-align: center;">✨ <span style="color: #1abc9c;">Kualitas terbaik</span> dengan harga ramah di kantong! ✨</p>
-</section>
-        <h2 id="2">TEMA UNDANGAN YANG TERSEDIA</h2>
-   <div class="card-container">
-
-<!-- LIGHT ===================================== -->
-       <div class="card">
-           <h3>Light</h3>
-           <div class="imgwrap">
-               <div class="boximg1" style="background-image: url('img/tema/light/light1.webp');"></div>
-               <div class="imgwrap-side">
-                   <div class="boximg2" style="background-image: url('img/tema/light/light2.webp');"></div>
-                   <div class="boximg2" style="background-image: url('img/tema/light/light3.webp');"></div>
-                   <div class="boximg2" style="background-image: url('img/tema/light/light4.webp');"></div>
-               </div>
-           </div>
-           <button><a href="light/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- DARK ===================================== -->
-        <div class="card">
-            <h3>Dark</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/dark/dark1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/dark/dark2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/dark/dark3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/dark/dark4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="dark/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- LIGHT BLUE ===================================== -->
-        <div class="card">
-            <h3>Light Blue</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/lightblue/lightblue1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/lightblue/lightblue2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightblue/lightblue3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightblue/lightblue4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="lightblue/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-        
-<!-- DARK BLUE ===================================== -->
-        <div class="card">
-            <h3>Dark Blue</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/darkblue/darkblue1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/darkblue/darkblue2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkblue/darkblue3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkblue/darkblue4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="darkblue/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- LIGHT PINKY PEACH ===================================== -->
-        <div class="card">
-            <h3>Light Peach</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/lightpinkypeach/lightpinkypeach1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/lightpinkypeach/lightpinkypeach2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightpinkypeach/lightpinkypeach3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightpinkypeach/lightpinkypeach4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="lightpinkypeach/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- DARK PINKY PEACH ===================================== -->
-        <div class="card">
-            <h3>Dark Peach</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/darkpinkypeach/darkpinkypeach1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/darkpinkypeach/darkpinkypeach2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkpinkypeach/darkpinkypeach3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkpinkypeach/darkpinkypeach4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="darkpinkypeach/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- LIGHT RED ===================================== -->
-        <div class="card">
-            <h3>Light Red</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/lightred/lightred1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/lightred/lightred2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightred/lightred3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightred/lightred4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="lightred/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- DARK RED ===================================== -->
-        <div class="card">
-            <h3>Dark Red</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/darkred/darkred1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/darkred/darkred2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkred/darkred3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkred/darkred4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="darkred/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- LIGHT GOLD ===================================== -->
-        <div class="card">
-            <h3>Light Gold</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/lightgold/lightgold1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/lightgold/lightgold2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightgold/lightgold3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/lightgold/lightgold4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="lightgold/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- DARK GOLD ===================================== -->
-        <div class="card">
-            <h3>Dark Gold</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/darkgold/darkgold1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/darkgold/darkgold2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkgold/darkgold3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/darkgold/darkgold4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="darkgold/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- NAVY ===================================== -->
-        <div class="card">
-            <h3>Navy</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/navy/navy1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/navy/navy2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/navy/navy3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/navy/navy4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="navy/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- MAROON ===================================== -->
-        <div class="card">
-            <h3>Maroon</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/maroon/maroon1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/maroon/maroon2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/maroon/maroon3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/maroon/maroon4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="maroon/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- CREAM PURPLE ===================================== -->
-        <div class="card">
-            <h3>Cream Purple</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/creampurple/creampurple1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/creampurple/creampurple2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/creampurple/creampurple3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/creampurple/creampurple4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="creampurple/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-<!-- WHITE ROSE PAPER ===================================== -->
-        <div class="card">
-            <h3>Rose Paper</h3>
-            <div class="imgwrap">
-                <div class="boximg1" style="background-image: url('img/tema/whiterosepaper/whiterosepaper1.webp');"></div>
-                <div class="imgwrap-side">
-                    <div class="boximg2" style="background-image: url('img/tema/whiterosepaper/whiterosepaper2.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/whiterosepaper/whiterosepaper3.webp');"></div>
-                    <div class="boximg2" style="background-image: url('img/tema/whiterosepaper/whiterosepaper4.webp');"></div>
-                </div>
-            </div>
-            <button><a href="whiterosepaper/index.html" target="_blank">Lihat Undangan</a></button>
-        </div>
-
-    </div>
-    
-    <br>
-    
-    <h2 id="3">HUBUNGI KAMI</h2>
-    <p>Yuk, buat undangan pernikahan digital custom yang unik dan berkesan hanya di Langowan Project! Cukup hubungi kami via WhatsApp, dan kami siap membantu.</p>
-    
-    <a href="https://wa.me/6285143731606" target="_blank" class="whatsapp-button">
-    📲 Hubungi Kami di WhatsApp
-    </a>
-    
-    <p>Jangan tunggu lama, buat undanganmu spesial bersama kami!</p>
-  </div>    
+</nav>
+<!-- Main Content -->
+<div class="container my-5">
+	<div class="row">
+		<!-- Bagian Harga -->
+		<div class="col-lg-4">
+			<section class="harga">
+			<h2 class="mb-4">💰 HARGA TERJANGKAU, KUALITAS PREMIUM! 💰</h2>
+			<h3>Cukup <span class="text-success fw-bold">Rp 60.000</span>, Anda Mendapatkan:</h3>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">
+					<i class="fas fa-check-circle text-success me-2"></i>Undangan Digital Selamanya
+				</li>
+				<li class="list-group-item">
+					<i class="fas fa-check-circle text-success me-2"></i>Unlimited Nama Tamu Undangan
+				</li>
+				<li class="list-group-item">
+					<i class="fas fa-check-circle text-success me-2"></i>Desain Elegan & Minimalis
+				</li>
+				<li class="list-group-item">
+					<i class="fas fa-check-circle text-success me-2"></i>Bebas Pilih Lagu
+				</li>
+				<li class="list-group-item">
+					<i class="fas fa-check-circle text-success me-2"></i>Tata Letak Rapi & Profesional
+				</li>
+				<li class="list-group-item">
+					<i class="fas fa-check-circle text-success me-2"></i>Akses Fleksibel di Semua Perangkat
+				</li>
+			</ul>
+			<p class="text-center mt-4 fw-bold">
+				✨ <span class="text-success">Kualitas terbaik</span> dengan harga ramah di kantong! ✨
+			</p>
+			</section>
+		</div>
+		<!-- Bagian Tema Undangan -->
+		<div class="col-lg-8">
+			<h2 id="2" class="mb-4">TEMA UNDANGAN YANG TERSEDIA</h2>
+			<div id="tema-container"></div>
+			<!-- Pagination -->
+			<nav aria-label="Page navigation">
+			<ul class="pagination" id="pagination">
+				<!-- Tombol dan nomor halaman akan dimuat di sini --></ul>
+			</nav>
+		</div>
+	</div>
 </div>
-
-<div class="footer">
-  <h3>&lt;/p> Langowan Project</h3>
+<!-- Kontak Section -->
+<div class="container my-5">
+	<h2 id="3" class="mb-4">HUBUNGI KAMI</h2>
+	<p>
+		Yuk, buat undangan pernikahan digital custom yang unik dan berkesan hanya di Langowan Project! Cukup hubungi kami via WhatsApp, dan kami siap membantu.
+	</p>
+	<a href="https://wa.me/6285143731606" target="_blank" class="whatsapp-button"><i class="fab fa-whatsapp"></i> Hubungi Kami di WhatsApp </a>
+	<p class="mt-3">
+		Jangan tunggu lama, buat undanganmu spesial bersama kami!
+	</p>
 </div>
-
+<!-- Footer -->
+<footer class="footer">
+<p>
+	&copy; 2025 Langowan Project. All rights reserved.
+</p>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script untuk Pagination -->
+<script>
+    // Data tema dengan 4 gambar per tema
+    const temaUndangan = [
+      {
+        nama: "White Rose Paper",
+        gambar: [
+          "img/tema/whiterosepaper/whiterosepaper1.webp",
+          "img/tema/whiterosepaper/whiterosepaper2.webp",
+          "img/tema/whiterosepaper/whiterosepaper3.webp",
+          "img/tema/whiterosepaper/whiterosepaper4.webp"
+        ]
+      },
+      {
+        nama: "Light",
+        gambar: [
+          "img/tema/light/light1.webp",
+          "img/tema/light/light2.webp",
+          "img/tema/light/light3.webp",
+          "img/tema/light/light4.webp"
+        ]
+      },
+      {
+        nama: "Dark",
+        gambar: [
+          "img/tema/dark/dark1.webp",
+          "img/tema/dark/dark2.webp",
+          "img/tema/dark/dark3.webp",
+          "img/tema/dark/dark4.webp"
+        ]
+      },
+      {
+        nama: "Light Blue",
+        gambar: [
+          "img/tema/lightblue/lightblue1.webp",
+          "img/tema/lightblue/lightblue2.webp",
+          "img/tema/lightblue/lightblue3.webp",
+          "img/tema/lightblue/lightblue4.webp"
+        ]
+      },
+      {
+        nama: "Dark Blue",
+        gambar: [
+          "img/tema/darkblue/darkblue1.webp",
+          "img/tema/darkblue/darkblue2.webp",
+          "img/tema/darkblue/darkblue3.webp",
+          "img/tema/darkblue/darkblue4.webp"
+        ]
+      },
+      {
+        nama: "Light Pinky Peach",
+        gambar: [
+          "img/tema/lightpinkypeach/lightpinkypeach1.webp",
+          "img/tema/lightpinkypeach/lightpinkypeach2.webp",
+          "img/tema/lightpinkypeach/lightpinkypeach3.webp",
+          "img/tema/lightpinkypeach/lightpinkypeach4.webp"
+        ]
+      },
+      {
+        nama: "Dark Pinky Peach",
+        gambar: [
+          "img/tema/Darkpinkypeach/Darkpinkypeach1.webp",
+          "img/tema/Darkpinkypeach/Darkpinkypeach2.webp",
+          "img/tema/Darkpinkypeach/Darkpinkypeach3.webp",
+          "img/tema/Darkpinkypeach/Darkpinkypeach4.webp"
+        ]
+      },
+      {
+        nama: "Light Red",
+        gambar: [
+          "img/tema/lightred/lightred1.webp",
+          "img/tema/lightred/lightred2.webp",
+          "img/tema/lightred/lightred3.webp",
+          "img/tema/lightred/lightred4.webp"
+        ]
+      },
+      {
+        nama: "Dark Red",
+        gambar: [
+          "img/tema/darkred/darkred1.webp",
+          "img/tema/darkred/darkred2.webp",
+          "img/tema/darkred/darkred3.webp",
+          "img/tema/darkred/darkred4.webp"
+        ]
+      },
+      {
+        nama: "Light Gold",
+        gambar: [
+          "img/tema/lightgold/lightgold1.webp",
+          "img/tema/lightgold/lightgold2.webp",
+          "img/tema/lightgold/lightgold3.webp",
+          "img/tema/lightgold/lightgold4.webp"
+        ]
+      },
+      {
+        nama: "Dark Gold",
+        gambar: [
+          "img/tema/darkgold/darkgold1.webp",
+          "img/tema/darkgold/darkgold2.webp",
+          "img/tema/darkgold/darkgold3.webp",
+          "img/tema/darkgold/darkgold4.webp"
+        ]
+      },
+      {
+        nama: "Navy",
+        gambar: [
+          "img/tema/navy/navy1.webp",
+          "img/tema/navy/navy2.webp",
+          "img/tema/navy/navy3.webp",
+          "img/tema/navy/navy4.webp"
+        ]
+      },
+      {
+        nama: "Maroon",
+        gambar: [
+          "img/tema/maroon/maroon1.webp",
+          "img/tema/maroon/maroon2.webp",
+          "img/tema/maroon/maroon3.webp",
+          "img/tema/maroon/maroon4.webp"
+        ]
+      },
+      {
+        nama: "Cream Purple",
+        gambar: [
+          "img/tema/creampurple/creampurple1.webp",
+          "img/tema/creampurple/creampurple2.webp",
+          "img/tema/creampurple/creampurple3.webp",
+          "img/tema/creampurple/creampurple4.webp"
+        ]
+      },
+      // Tambahkan tema lainnya dengan struktur yang sama
+    ];
+    // Konfigurasi pagination
+const itemsPerPage = 8; // 8 tema per halaman
+let currentPage = 1;
+// Fungsi untuk menampilkan tema
+function displayTema(page) {
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const temaContainer = document.getElementById('tema-container');
+  temaContainer.innerHTML = '';
+  temaUndangan.slice(start, end).forEach(tema => {
+    const slug = tema.nama.toLowerCase().replace(/\s/g, '');
+    temaContainer.innerHTML += `
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">${tema.nama}</h5>
+          <div class="imgwrap">
+            <div class="boximg1">
+              <img src="${tema.gambar[0]}" alt="${tema.nama} 1"></div>
+            <div class="imgwrap-side">
+              ${tema.gambar.slice(1).map((img, index) => `
+                <div class="boximg2">
+                  <img src="${img}" alt="${tema.nama} ${index + 2}"></div>
+              `).join('')}
+            </div>
+          </div>
+          <a href="${slug}/index.html" 
+             class="btn btn-primary mt-3" 
+             target="_blank">Lihat Undangan</a>
+        </div>
+      </div>
+    `;
+  });
+}
+// Fungsi untuk menghasilkan pagination
+function generatePagination() {
+  const pagination = document.getElementById('pagination');
+  const totalPages = Math.ceil(temaUndangan.length / itemsPerPage);
+  pagination.innerHTML = '';
+  // Tombol Previous
+  pagination.innerHTML += `
+    <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+      <a class="page-link" href="#" onclick="changePage(${currentPage - 1})">Previous</a>
+    </li>
+  `;
+  // Logic nomor halaman
+  const maxVisiblePages = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+  // Adjust startPage jika endPage mencapai batas
+  if (endPage - startPage < maxVisiblePages - 1) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+  }
+  // Halaman pertama dan ellipsis
+  if (startPage > 1) {
+    pagination.innerHTML += `
+      <li class="page-item">
+        <a class="page-link" href="#" onclick="changePage(1)">1</a>
+      </li>
+      ${startPage > 2 ? `<li class="page-item ellipsis"><span class="page-link">...</span></li>` : ''}
+    `;
+  }
+  // Nomor halaman utama
+  for (let i = startPage; i <= endPage; i++) {
+    pagination.innerHTML += `
+      <li class="page-item ${i === currentPage ? 'active' : ''}">
+        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+      </li>
+    `;
+  }
+  // Halaman terakhir dan ellipsis
+  if (endPage < totalPages) {
+    pagination.innerHTML += `
+      ${endPage < totalPages - 1 ? `<li class="page-item ellipsis"><span class="page-link">...</span></li>` : ''}
+      <li class="page-item">
+        <a class="page-link" href="#" onclick="changePage(${totalPages})">${totalPages}</a>
+      </li>
+    `;
+  }
+  // Tombol Next
+  pagination.innerHTML += `
+    <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+      <a class="page-link" href="#" onclick="changePage(${currentPage + 1})">Next</a>
+    </li>
+  `;
+}
+// Fungsi untuk mengganti halaman
+function changePage(page) {
+  const totalPages = Math.ceil(temaUndangan.length / itemsPerPage);
+  if (page < 1 || page > totalPages) return;
+  currentPage = page;
+  displayTema(currentPage);
+  generatePagination();
+}
+// Inisialisasi pertama
+displayTema(currentPage);
+generatePagination();
+  </script>
 </body>
 </html>
