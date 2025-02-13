@@ -11,7 +11,7 @@
   content: '';
   position: absolute;
   width: 5px;
-  background-color: hsla(var(--h), var(--s_A), var(--l_D), 1);
+  background-color: hsla(var(--h), var(--s_B), var(--l_D), 1);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -60,9 +60,9 @@
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid hsla(var(--h), var(--s_A), var(--l_D), 1);
+  border: medium solid hsla(var(--h), var(--s_B), var(--l_D), 1);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent hsla(var(--h), var(--s_A), var(--l_D), 1);
+  border-color: transparent transparent transparent hsla(var(--h), var(--s_B), var(--l_D), 1);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -74,9 +74,9 @@
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid hsla(var(--h), var(--s_A), var(--l_D), 1);
+  border: medium solid hsla(var(--h), var(--s_B), var(--l_D), 1);
   border-width: 10px 10px 10px 0;
-  border-color: transparent hsla(var(--h), var(--s_A), var(--l_D), 1) transparent transparent;
+  border-color: transparent hsla(var(--h), var(--s_B), var(--l_D), 1) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -110,9 +110,9 @@
   /* Make sure that all arrows are pointing leftwards */
   .tl-left::before, .tl-right::before{
     left: 61px;
-    border: medium solid hsla(var(--h), var(--s_A), var(--l_D), 1);
+    border: medium solid hsla(var(--h), var(--s_B), var(--l_D), 1);
     border-width: 10px 10px 10px 0;
-    border-color: transparent hsla(var(--h), var(--s_A), var(--l_D), 1) transparent transparent;
+    border-color: transparent hsla(var(--h), var(--s_B), var(--l_D), 1) transparent transparent;
   }  
   
   /* Make sure all circles are at the same spot */
@@ -146,9 +146,9 @@
   /* Make sure that all arrows are pointing leftwards */
   .tl-left::before, .tl-right::before{
     left: 60px;
-    border: medium solid hsla(var(--h), var(--s_A), var(--l_A), 1);
+    border: medium solid hsla(var(--h), var(--s_B), var(--l_D), 1);
     border-width: 10px 10px 10px 0;
-    border-color: transparent hsla(var(--h), var(--s_A), var(--l_D), 1) transparent transparent;
+    border-color: transparent hsla(var(--h), var(--s_B), var(--l_D), 1) transparent transparent;
   }  
     
   /* Make sure all circles are at the same spot */
