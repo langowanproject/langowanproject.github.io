@@ -1,0 +1,149 @@
+/* Style untuk daun */
+.floral {
+    position: absolute;
+}
+
+.flip {
+    transform: scaleX(-1);
+}
+
+.flipY {
+    transform: scaleY(-1);
+}
+
+.flipboth {
+    transform: scale(-1, -1);
+}
+
+/* Posisi untuk daun di kiri atas */
+.kiri-atas {
+    top: -35px;
+    left: -20px;
+    z-index: -100;
+}
+
+.kiri-atas2 {
+    top: -10px;
+    left: -50px;
+    z-index: -100;
+}
+
+/* Posisi untuk daun di kanan atas */
+.kanan-atas {
+    top: -50px;
+    right: -100px;
+    z-index: -100;
+}
+
+.kanan-atas2 {
+    top: -10px;
+    right: -50px;
+    z-index: -100;
+}
+
+/* Posisi untuk daun di kiri bawah */
+.kiri-bawah {
+    bottom: -30px;
+    left: -30px;
+    z-index: -100;
+}
+
+.kiri-bawah2 {
+    bottom: 50px;
+    left: -10px;
+    z-index: -100;
+}
+
+/* Posisi untuk daun di kanan bawah */
+.kanan-bawah {
+    bottom: -10px;
+    right: -30px;
+    z-index: -100;
+}
+
+.kanan-bawah2 {
+    bottom: 50px;
+    right: -10px;
+    z-index: -100;
+}
+
+/* Animasi untuk gerak ke kanan (metronome) */
+.gerakkanan1 {
+    display: inline-block; /* Membuat elemen mengikuti alur dokumen */
+    animation: floatKanan 10s infinite ease-in-out;
+    transform-origin: bottom center; /* Titik poros di bagian bawah tengah */
+}
+
+.gerakkanan2 {
+    display: inline-block; /* Membuat elemen mengikuti alur dokumen */
+    animation: floatKiri 10s infinite ease-in-out;
+    transform-origin: top center; /* Titik poros di bagian bawah tengah */
+}
+
+.gerakkanan3 {
+    display: inline-block; /* Membuat elemen mengikuti alur dokumen */
+    animation: floatKanan 10s infinite ease-in-out;
+    transform-origin: right center; /* Titik poros di bagian bawah tengah */
+}
+
+@keyframes floatKanan {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg); /* Bergerak ke kanan */
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animasi untuk gerak ke kiri (metronome) */
+.gerakkiri1 {
+    display: inline-block; /* Membuat elemen mengikuti alur dokumen */
+    animation: floatKiri 10s infinite ease-in-out;
+    transform-origin: bottom center; /* Titik poros di bagian bawah tengah */
+}
+
+.gerakkiri2 {
+    display: inline-block; /* Membuat elemen mengikuti alur dokumen */
+    animation: floatKanan 10s infinite ease-in-out;
+    transform-origin: top left; /* Titik poros di bagian bawah tengah */
+}
+
+.gerakkiri3 {
+    display: inline-block; /* Membuat elemen mengikuti alur dokumen */
+    animation: floatKiri 10s infinite ease-in-out;
+    transform-origin: left center; /* Titik poros di bagian bawah tengah */
+}
+
+@keyframes floatKiri {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg); /* Bergerak ke kiri */
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animasi untuk gerak ke atas menghadap kiri */
+.gerakatas-kiri {
+    display: inline-block; /* Membuat elemen mengikuti alur dokumen */
+    animation: floatAtasKiri 10s infinite ease-in-out;
+    transform-origin: bottom center; /* Titik poros di bagian bawah tengah */
+}
+
+@keyframes floatAtasKiri {
+    0% {
+        transform: rotate(-20deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-20deg) translateY(-20px); /* Bergerak ke atas */
+    }
+    100% {
+        transform: rotate(-20deg) translateY(0);
+    }
+}
