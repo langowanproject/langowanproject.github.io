@@ -64,7 +64,7 @@
   },
   {
     "nama": "Light Pinky Peach",
-    "warna": ["pink", "peach", "terang", "putih"],
+    "warna": ["pink", "peach", "terang", "putih", "pastel"],
     "gambar": [
       "img/tema/lightpinkypeach/lightpinkypeach1.webp",
       "img/tema/lightpinkypeach/lightpinkypeach2.webp",
@@ -73,7 +73,7 @@
   },
   {
     "nama": "Dark Pinky Peach",
-    "warna": ["pink", "peach", "gelap", "abu-abu", "hitam"],
+    "warna": ["pink", "peach", "gelap", "abu-abu", "hitam", "pastel"],
     "gambar": [
       "img/tema/darkpinkypeach/darkpinkypeach1.webp",
       "img/tema/darkpinkypeach/darkpinkypeach2.webp",
