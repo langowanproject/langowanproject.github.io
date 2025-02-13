@@ -21,12 +21,10 @@
     --shadow-color: rgba(0, 0, 0, 0.1); /* Warna shadow */
     --shadow-color2: rgba(0, 0, 0, 0.3); /* Warna shadow kedua */
   }
-
   /* Global Styles */
   body {
     font-family: 'Poppins', sans-serif;
   }
-
   /* Header */
   .header {
     padding: 60px 0;
@@ -34,27 +32,23 @@
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: var(--neutral-light);
   }
-
   /* Navbar */
   .navbar {
     background-color: var(--neutral-dark);
     box-shadow: 0 2px 4px var(--shadow-color);
   }
-
   /* Navbar Toggle Button */
   .navbar-toggler {
     border: none;
     outline: none;
     padding: 0 1.5rem 0 0;
   }
-
   .navbar-toggler-icon {
     background-image: none;
     position: relative;
     width: 24px;
     height: 24px;
   }
-
   .navbar-toggler-icon::before,
   .navbar-toggler-icon::after {
     content: '';
@@ -64,25 +58,20 @@
     background-color: var(--neutral-light);
     transition: transform 0.3s ease;
   }
-
   .navbar-toggler-icon::before {
     top: 6px;
   }
-
   .navbar-toggler-icon::after {
     bottom: 6px;
   }
-
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
     transform: rotate(45deg);
     top: 11px;
   }
-
   .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
     transform: rotate(-45deg);
     bottom: 11px;
   }
-
   /* Card */
   .card {
     background-color: var(--neutral-light);
@@ -90,12 +79,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
   }
-
   .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px var(--shadow-color);
   }
-
   /* Button */
   .whatsapp-button {
     background-color: var(--primary-color);
@@ -107,16 +94,13 @@
     margin-top: 10px;
     transition: background-color 0.3s ease;
   }
-
   .whatsapp-button:hover {
     background-color: var(--primary-dark);
   }
-
   .btn-primary {
     background-color: var(--primary-color);
     border: 0;
   }
-
   /* Footer */
   .footer {
     background-color: var(--neutral-dark);
@@ -125,19 +109,16 @@
     padding: 20px 0;
     margin-top: 40px;
   }
-
   /* Image Wrapper */
   .imgwrap {
     display: flex;
     gap: 10px;
     height: 300px;
   }
-
   .boximg1 {
     flex: 1;
     height: 100%;
   }
-
   .boximg1 img {
     width: 100%;
     height: 100%;
@@ -145,7 +126,6 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color2);
   }
-
   .imgwrap-side {
     flex: 1;
     display: flex;
@@ -153,12 +133,10 @@
     gap: 10px;
     height: 100%;
   }
-
   .boximg2 {
     flex: 1;
     height: calc(33.33% - 7px);
   }
-
   .boximg2 img {
     width: 100%;
     height: 100%;
@@ -166,17 +144,14 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color2);
   }
-
   /* Pagination */
   .pagination {
     margin-top: 20px;
     justify-content: center;
   }
-
   .pagination .page-item {
     margin: 0 2px;
   }
-
   .pagination .page-item .page-link {
     color: var(--primary-color);
     background-color: var(--neutral-light);
@@ -185,37 +160,47 @@
     padding: 8px 12px;
     transition: all 0.3s ease;
   }
-
   .pagination .page-item .page-link:hover {
     color: var(--neutral-light);
     background-color: var(--primary-color);
     border-color: var(--primary-color);
   }
-
   .pagination .page-item.active .page-link {
     color: var(--neutral-light);
     background-color: var(--primary-color);
     border-color: var(--primary-color);
   }
-
   .pagination .page-item.disabled .page-link {
     color: #CCCCCC;
     background-color: #F4F4F4;
     border-color: #CCCCCC;
   }
-
   .pagination .page-item.ellipsis .page-link {
     pointer-events: none;
     border: none;
     background-color: transparent;
     color: #000;
   }
+  #colorFilter {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    transition: border-color 0.3s ease;
+}
+#colorFilter:focus {
+    border-color: var(--primary-dark);
+    outline: none;
+}
 </style>
 </head>
-<body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false" >
+<body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
 <!-- Header -->
 <div class="header">
- <img src="img/logo.png" alt="" width="150rem"></img>
+	<img src="img/logo.png" alt="" width="150rem"></img>
 	<h1 class="display-4">LANGOWAN PROJECT</h1>
 	<p class="lead">By Samuel</p>
 </div>
@@ -272,18 +257,41 @@
 				</li>
 			</ul>
 			<p class="text-center mt-4 fw-bold">
-				✨ <span class="text-success">Kualitas terbaik</span> - harga ramah di kantong! ✨
+				 ✨ <span class="text-success">Kualitas terbaik</span> - harga ramah di kantong! ✨
 			</p>
 			</section>
 		</div>
 		<!-- Bagian Tema Undangan -->
-		<div class="col-lg-8">
+		<div class="container my-5">
 			<h2 id="2" class="mb-4">TEMA UNDANGAN YANG TERSEDIA</h2>
+			<!-- Input Pencarian -->
+			<div class="mb-4">
+				<input type="text" id="searchInput" class="form-control" placeholder="Cari tema..." oninput="searchTema()"></div>
+			<!-- Filter Warna -->
+			<div class="mb-4">
+				<label for="colorFilter" class="form-label">Filter Berdasarkan Warna:</label>
+				<select id="colorFilter" class="form-select" onchange="filterByColor()">
+					<option value="">Semua Warna</option>
+					<option value="putih">Putih</option>
+					<option value="biru">Biru</option>
+					<option value="pink">Pink</option>
+					<option value="merah">Merah</option>
+					<option value="emas">Emas</option>
+					<option value="hitam">Hitam</option>
+					<option value="pastel">Pastel</option>
+					<option value="gelap">Gelap</option>
+					<option value="terang">Terang</option>
+					<option value="hijau">Hijau</option>
+					<option value="abu-abu">Abu-Abu</option>
+					<option value="kelasi">Kelasi</option>
+					<option value="manggis">Manggis</option>
+					<option value="krem">Krem</option>
+					<!-- Tambahkan opsi warna lainnya --></select>
+			</div>
 			<div id="tema-container"></div>
 			<!-- Pagination -->
 			<nav aria-label="Page navigation">
-			<ul class="pagination" id="pagination">
-				<!-- Tombol dan nomor halaman akan dimuat di sini --></ul>
+			<ul class="pagination" id="pagination"></ul>
 			</nav>
 		</div>
 	</div>
@@ -292,247 +300,161 @@
 <div class="container my-5">
 	<h2 id="3" class="mb-4">HUBUNGI KAMI</h2>
 	<p>
-		Yuk, buat undangan pernikahan digital custom yang unik dan berkesan hanya di Langowan Project! Cukup hubungi kami via WhatsApp, dan kami siap membantu.
+		 Yuk, buat undangan pernikahan digital custom yang unik dan berkesan hanya di Langowan Project! Cukup hubungi kami via WhatsApp, dan kami siap membantu.
 	</p>
 	<a href="https://wa.me/6285143731606" target="_blank" class="whatsapp-button"><i class="fab fa-whatsapp"></i> Hubungi Kami di WhatsApp </a>
 	<p class="mt-3">
-		Jangan tunggu lama, buat undanganmu spesial bersama kami!
+		 Jangan tunggu lama, buat undanganmu spesial bersama kami!
 	</p>
 </div>
 <!-- Footer -->
 <footer class="footer">
 <p>
-	&copy; 2025 Langowan Project. All rights reserved.
+	 &copy; 2025 Langowan Project. All rights reserved.
 </p>
 </footer>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Script untuk Pagination -->
 <script>
-    // Data tema dengan 4 gambar per tema
-    const temaUndangan = [
-      {
-        nama: "White Rose Paper",
-        gambar: [
-          "img/tema/whiterosepaper/whiterosepaper1.webp",
-          "img/tema/whiterosepaper/whiterosepaper2.webp",
-          "img/tema/whiterosepaper/whiterosepaper3.webp"
-        ]
-      },
-      {
-        nama: "Blue Floral",
-        gambar: [
-          "img/tema/bluefloral/bluefloral1.webp",
-          "img/tema/bluefloral/bluefloral2.webp",
-          "img/tema/bluefloral/bluefloral3.webp"
-        ]
-      },
-      {
-        nama: "Pink Floral",
-        gambar: [
-          "img/tema/pinkfloral/pinkfloral1.webp",
-          "img/tema/pinkfloral/pinkfloral2.webp",
-          "img/tema/pinkfloral/pinkfloral3.webp"
-        ]
-      },
-      {
-        nama: "Light",
-        gambar: [
-          "img/tema/light/light1.webp",
-          "img/tema/light/light2.webp",
-          "img/tema/light/light3.webp"
-        ]
-      },
-      {
-        nama: "Dark",
-        gambar: [
-          "img/tema/dark/dark1.webp",
-          "img/tema/dark/dark2.webp",
-          "img/tema/dark/dark3.webp"
-        ]
-      },
-      {
-        nama: "Light Blue",
-        gambar: [
-          "img/tema/lightblue/lightblue1.webp",
-          "img/tema/lightblue/lightblue2.webp",
-          "img/tema/lightblue/lightblue3.webp"
-        ]
-      },
-      {
-        nama: "Dark Blue",
-        gambar: [
-          "img/tema/darkblue/darkblue1.webp",
-          "img/tema/darkblue/darkblue2.webp",
-          "img/tema/darkblue/darkblue3.webp"
-        ]
-      },
-      {
-        nama: "Light Pinky Peach",
-        gambar: [
-          "img/tema/lightpinkypeach/lightpinkypeach1.webp",
-          "img/tema/lightpinkypeach/lightpinkypeach2.webp",
-          "img/tema/lightpinkypeach/lightpinkypeach3.webp"
-        ]
-      },
-      {
-        nama: "Dark Pinky Peach",
-        gambar: [
-          "img/tema/darkpinkypeach/darkpinkypeach1.webp",
-          "img/tema/darkpinkypeach/darkpinkypeach2.webp",
-          "img/tema/darkpinkypeach/darkpinkypeach3.webp"
-        ]
-      },
-      {
-        nama: "Light Red",
-        gambar: [
-          "img/tema/lightred/lightred1.webp",
-          "img/tema/lightred/lightred2.webp",
-          "img/tema/lightred/lightred3.webp"
-        ]
-      },
-      {
-        nama: "Dark Red",
-        gambar: [
-          "img/tema/darkred/darkred1.webp",
-          "img/tema/darkred/darkred2.webp",
-          "img/tema/darkred/darkred3.webp"
-        ]
-      },
-      {
-        nama: "Light Gold",
-        gambar: [
-          "img/tema/lightgold/lightgold1.webp",
-          "img/tema/lightgold/lightgold2.webp",
-          "img/tema/lightgold/lightgold3.webp"
-        ]
-      },
-      {
-        nama: "Dark Gold",
-        gambar: [
-          "img/tema/darkgold/darkgold1.webp",
-          "img/tema/darkgold/darkgold2.webp",
-          "img/tema/darkgold/darkgold3.webp"
-        ]
-      },
-      {
-        nama: "Navy",
-        gambar: [
-          "img/tema/navy/navy1.webp",
-          "img/tema/navy/navy2.webp",
-          "img/tema/navy/navy3.webp"
-        ]
-      },
-      {
-        nama: "Maroon",
-        gambar: [
-          "img/tema/maroon/maroon1.webp",
-          "img/tema/maroon/maroon2.webp",
-          "img/tema/maroon/maroon3.webp"
-        ]
-      },
-      {
-        nama: "Cream Purple",
-        gambar: [
-          "img/tema/creampurple/creampurple1.webp",
-          "img/tema/creampurple/creampurple2.webp",
-          "img/tema/creampurple/creampurple3.webp"
-        ]
-      },
-      // Tambahkan tema lainnya dengan struktur yang sama
-    ];
-    // Konfigurasi pagination
+let temaUndangan = [];
+let filteredTema = [];
 const itemsPerPage = 8; // 8 tema per halaman
 let currentPage = 1;
+
+// Fungsi untuk memuat data tema dari tema.json
+async function loadTema() {
+    try {
+        const response = await fetch('tema.json');
+        temaUndangan = await response.json();
+        filteredTema = temaUndangan;
+        displayTema(currentPage);
+        generatePagination();
+    } catch (error) {
+        console.error('Error loading tema data:', error);
+    }
+}
+
+// Panggil fungsi loadTema saat halaman dimuat
+document.addEventListener('DOMContentLoaded', loadTema);
+
+// Fungsi untuk mencari tema berdasarkan nama
+function searchTema() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const selectedColor = document.getElementById('colorFilter').value.toLowerCase();
+    filterTema(searchTerm, selectedColor);
+}
+
+// Fungsi untuk memfilter tema berdasarkan warna
+function filterByColor() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const selectedColor = document.getElementById('colorFilter').value.toLowerCase();
+    filterTema(searchTerm, selectedColor);
+}
+
+// Fungsi utama untuk memfilter tema
+function filterTema(searchTerm, selectedColor) {
+    filteredTema = temaUndangan.filter(tema => {
+        const matchesSearch = tema.nama.toLowerCase().includes(searchTerm);
+        const matchesColor = selectedColor === "" || tema.warna.some(warna => warna.toLowerCase() === selectedColor);
+        return matchesSearch && matchesColor;
+    });
+    currentPage = 1; // Reset ke halaman pertama setelah filter
+    displayTema(currentPage);
+    generatePagination();
+}
+
 // Fungsi untuk menampilkan tema
 function displayTema(page) {
-  const start = (page - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const temaContainer = document.getElementById('tema-container');
-  temaContainer.innerHTML = '';
-  temaUndangan.slice(start, end).forEach(tema => {
-    const slug = tema.nama.toLowerCase().replace(/\s/g, '');
-    temaContainer.innerHTML += `
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">${tema.nama}</h5>
-          <div class="imgwrap">
-            <div class="boximg1">
-              <img src="${tema.gambar[0]}" alt="${tema.nama} 1"></div>
-            <div class="imgwrap-side">
-              ${tema.gambar.slice(1).map((img, index) => `
-                <div class="boximg2">
-                  <img src="${img}" alt="${tema.nama} ${index + 2}"></div>
-              `).join('')}
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const temaContainer = document.getElementById('tema-container');
+    temaContainer.innerHTML = '';
+    filteredTema.slice(start, end).forEach(tema => {
+        const slug = tema.nama.toLowerCase().replace(/\s/g, '');
+        temaContainer.innerHTML += `
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">${tema.nama}</h5>
+                    <div class="imgwrap">
+                        <div class="boximg1">
+                            <img src="${tema.gambar[0]}" alt="${tema.nama} 1"></div>
+                        <div class="imgwrap-side">
+                            ${tema.gambar.slice(1).map((img, index) => `
+                                <div class="boximg2">
+                                    <img src="${img}" alt="${tema.nama} ${index + 2}"></div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <a href="${slug}/index.html" 
+                       class="btn btn-primary mt-3" 
+                       target="_blank">Lihat Undangan</a>
+                </div>
             </div>
-          </div>
-          <a href="${slug}/index.html" 
-             class="btn btn-primary mt-3" 
-             target="_blank">Lihat Undangan</a>
-        </div>
-      </div>
-    `;
-  });
+        `;
+    });
 }
+
 // Fungsi untuk menghasilkan pagination
 function generatePagination() {
-  const pagination = document.getElementById('pagination');
-  const totalPages = Math.ceil(temaUndangan.length / itemsPerPage);
-  pagination.innerHTML = '';
-  // Tombol Previous
-  pagination.innerHTML += `
-    <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
-      <a class="page-link" href="#" onclick="changePage(${currentPage - 1})">Previous</a>
-    </li>
-  `;
-  // Logic nomor halaman
-  const maxVisiblePages = 5;
-  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-  // Adjust startPage jika endPage mencapai batas
-  if (endPage - startPage < maxVisiblePages - 1) {
-    startPage = Math.max(1, endPage - maxVisiblePages + 1);
-  }
-  // Halaman pertama dan ellipsis
-  if (startPage > 1) {
+    const pagination = document.getElementById('pagination');
+    const totalPages = Math.ceil(filteredTema.length / itemsPerPage);
+    pagination.innerHTML = '';
+    // Tombol Previous
     pagination.innerHTML += `
-      <li class="page-item">
-        <a class="page-link" href="#" onclick="changePage(1)">1</a>
-      </li>
-      ${startPage > 2 ? `<li class="page-item ellipsis"><span class="page-link">...</span></li>` : ''}
+        <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${currentPage - 1})">Previous</a>
+        </li>
     `;
-  }
-  // Nomor halaman utama
-  for (let i = startPage; i <= endPage; i++) {
+    // Logic nomor halaman
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    // Adjust startPage jika endPage mencapai batas
+    if (endPage - startPage < maxVisiblePages - 1) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+    // Halaman pertama dan ellipsis
+    if (startPage > 1) {
+        pagination.innerHTML += `
+            <li class="page-item">
+                <a class="page-link" href="#" onclick="changePage(1)">1</a>
+            </li>
+            ${startPage > 2 ? `<li class="page-item ellipsis"><span class="page-link">...</span></li>` : ''}
+        `;
+    }
+    // Nomor halaman utama
+    for (let i = startPage; i <= endPage; i++) {
+        pagination.innerHTML += `
+            <li class="page-item ${i === currentPage ? 'active' : ''}">
+                <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+            </li>
+        `;
+    }
+    // Halaman terakhir dan ellipsis
+    if (endPage < totalPages) {
+        pagination.innerHTML += `
+            ${endPage < totalPages - 1 ? `<li class="page-item ellipsis"><span class="page-link">...</span></li>` : ''}
+            <li class="page-item">
+                <a class="page-link" href="#" onclick="changePage(${totalPages})">${totalPages}</a>
+            </li>
+        `;
+    }
+    // Tombol Next
     pagination.innerHTML += `
-      <li class="page-item ${i === currentPage ? 'active' : ''}">
-        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
-      </li>
+        <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${currentPage + 1})">Next</a>
+        </li>
     `;
-  }
-  // Halaman terakhir dan ellipsis
-  if (endPage < totalPages) {
-    pagination.innerHTML += `
-      ${endPage < totalPages - 1 ? `<li class="page-item ellipsis"><span class="page-link">...</span></li>` : ''}
-      <li class="page-item">
-        <a class="page-link" href="#" onclick="changePage(${totalPages})">${totalPages}</a>
-      </li>
-    `;
-  }
-  // Tombol Next
-  pagination.innerHTML += `
-    <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
-      <a class="page-link" href="#" onclick="changePage(${currentPage + 1})">Next</a>
-    </li>
-  `;
 }
+
 // Fungsi untuk mengganti halaman
 function changePage(page) {
-  const totalPages = Math.ceil(temaUndangan.length / itemsPerPage);
-  if (page < 1 || page > totalPages) return;
-  currentPage = page;
-  displayTema(currentPage);
-  generatePagination();
+    const totalPages = Math.ceil(filteredTema.length / itemsPerPage);
+    if (page < 1 || page > totalPages) return;
+    currentPage = page;
+    displayTema(currentPage);
+    generatePagination();
 }
 // Inisialisasi pertama
 displayTema(currentPage);
