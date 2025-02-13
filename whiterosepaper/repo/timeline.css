@@ -87,7 +87,7 @@
 /* The actual content */
 .tl-left div, .tl-right div{
   padding: 20px 30px;
-  background-color: hsla(var(--h), var(--s_A), var(--l_D), 1);
+  background-color: hsla(var(--h), var(--s_B), var(--l_D), 1);
   color: var(--color-C);
   position: relative;
   border-radius: 6px;
