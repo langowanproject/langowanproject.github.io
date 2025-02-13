@@ -19,6 +19,7 @@
     --neutral-dark: #34495E;        /* Warna netral gelap */
     --accent-color: #E74C3C;        /* Warna aksen */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Warna shadow */
+    --shadow-color2: rgba(0, 0, 0, 0.3); /* Warna shadow kedua */
   }
 
   /* Global Styles */
@@ -142,6 +143,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color2);
   }
 
   .imgwrap-side {
@@ -162,7 +164,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px var(--shadow-color2);
   }
 
   /* Pagination */
