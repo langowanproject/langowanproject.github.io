@@ -9,6 +9,15 @@
     ]
   },
   {
+    "nama": "Beige Minimalist",
+    "warna": ["pastel", "krem", "terang", "netral"],
+    "gambar": [
+      "img/tema/beigeminimalist/beigeminimalist1.webp",
+      "img/tema/beigeminimalist/beigeminimalist2.webp",
+      "img/tema/beigeminimalist/beigeminimalist3.webp"
+    ]
+  },
+  {
     "nama": "Blue Floral",
     "warna": ["biru", "pastel", "terang"],
     "gambar": [
