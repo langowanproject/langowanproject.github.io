@@ -18,6 +18,15 @@
     ]
   },
   {
+    "nama": "Water Color Floral",
+    "warna": ["pastel", "kuning", "terang", "biru"],
+    "gambar": [
+      "img/tema/watercolorfloral/watercolorfloral1.webp",
+      "img/tema/watercolorfloral/watercolorfloral2.webp",
+      "img/tema/watercolorfloral/watercolorfloral3.webp"
+    ]
+  },
+  {
     "nama": "Blue Floral",
     "warna": ["biru", "pastel", "terang"],
     "gambar": [
