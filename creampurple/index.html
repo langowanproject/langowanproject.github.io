@@ -23,15 +23,15 @@
     <link rel="stylesheet" href="repo/gift.css">
     <link rel="stylesheet" href="repo/guestbook.css">
     <link rel="stylesheet" href="repo/hashover.css">
-<style>
-        /* Tambahkan CSS loading spinner */
+    
+    <style>
         .loading-spinner {
-            display: block;
+            display: block; /* Tampilkan spinner secara default */
             width: 20px;
             height: 20px;
-            border: 3px solid #f3f3f3;
+            border: 3px solid var(--color-C);
             border-radius: 50%;
-            border-top: 3px solid #555;
+            border-top: 3px solid var(--color-D);
             animation: spin 1s linear infinite;
             margin: 0 auto;
         }
@@ -48,6 +48,7 @@
             gap: 8px;
         }
     </style>
+    
 </head>
 <body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false" >
     <header>
@@ -187,7 +188,7 @@
             const spinner = document.querySelector('.loading-spinner');
             const buttonText = document.querySelector('.button-text');
             const openButton = document.getElementById('text_popup');
-            
+    
             if (show) {
                 spinner.style.display = 'block';
                 buttonText.style.display = 'none';
@@ -199,10 +200,10 @@
             }
         }
 
-        // Fungsi untuk membaca daftar nama dari file .txt
+        // Fungsi untuk memuat nama dan menyembunyikan loading setelah selesai
         async function loadNames() {
             toggleLoading(true); // Tampilkan loading
-            
+    
             try {
                 const response = await fetch('data-input/daftar-nama.txt');
                 const text = await response.text();
@@ -218,7 +219,7 @@
             } catch (error) {
                 console.error('Error loading names:', error);
             } finally {
-                toggleLoading(false); // Sembunyikan loading
+                toggleLoading(false); // Sembunyikan loading setelah selesai
             }
         }
 
