@@ -6,7 +6,8 @@
       "img/tema/whiterosepaper/whiterosepaper1.webp",
       "img/tema/whiterosepaper/whiterosepaper2.webp",
       "img/tema/whiterosepaper/whiterosepaper3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Beige Minimalist",
@@ -15,7 +16,8 @@
       "img/tema/beigeminimalist/beigeminimalist1.webp",
       "img/tema/beigeminimalist/beigeminimalist2.webp",
       "img/tema/beigeminimalist/beigeminimalist3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Black Minimalist",
@@ -24,7 +26,8 @@
       "img/tema/blackminimalist/blackminimalist1.webp",
       "img/tema/blackminimalist/blackminimalist2.webp",
       "img/tema/blackminimalist/blackminimalist3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Watercolor Floral",
@@ -33,7 +36,8 @@
       "img/tema/watercolorfloral/watercolorfloral1.webp",
       "img/tema/watercolorfloral/watercolorfloral2.webp",
       "img/tema/watercolorfloral/watercolorfloral3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Blue Floral",
@@ -42,7 +46,8 @@
       "img/tema/bluefloral/bluefloral1.webp",
       "img/tema/bluefloral/bluefloral2.webp",
       "img/tema/bluefloral/bluefloral3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Pink Floral",
@@ -51,7 +56,8 @@
       "img/tema/pinkfloral/pinkfloral1.webp",
       "img/tema/pinkfloral/pinkfloral2.webp",
       "img/tema/pinkfloral/pinkfloral3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Light",
@@ -60,7 +66,8 @@
       "img/tema/light/light1.webp",
       "img/tema/light/light2.webp",
       "img/tema/light/light3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Dark",
@@ -69,7 +76,8 @@
       "img/tema/dark/dark1.webp",
       "img/tema/dark/dark2.webp",
       "img/tema/dark/dark3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Light Blue",
@@ -78,7 +86,8 @@
       "img/tema/lightblue/lightblue1.webp",
       "img/tema/lightblue/lightblue2.webp",
       "img/tema/lightblue/lightblue3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Dark Blue",
@@ -87,7 +96,8 @@
       "img/tema/darkblue/darkblue1.webp",
       "img/tema/darkblue/darkblue2.webp",
       "img/tema/darkblue/darkblue3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Light Pinky Peach",
@@ -96,7 +106,8 @@
       "img/tema/lightpinkypeach/lightpinkypeach1.webp",
       "img/tema/lightpinkypeach/lightpinkypeach2.webp",
       "img/tema/lightpinkypeach/lightpinkypeach3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Dark Pinky Peach",
@@ -105,7 +116,8 @@
       "img/tema/darkpinkypeach/darkpinkypeach1.webp",
       "img/tema/darkpinkypeach/darkpinkypeach2.webp",
       "img/tema/darkpinkypeach/darkpinkypeach3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Light Red",
@@ -114,7 +126,8 @@
       "img/tema/lightred/lightred1.webp",
       "img/tema/lightred/lightred2.webp",
       "img/tema/lightred/lightred3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Dark Red",
@@ -123,7 +136,8 @@
       "img/tema/darkred/darkred1.webp",
       "img/tema/darkred/darkred2.webp",
       "img/tema/darkred/darkred3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Light Gold",
@@ -132,7 +146,8 @@
       "img/tema/lightgold/lightgold1.webp",
       "img/tema/lightgold/lightgold2.webp",
       "img/tema/lightgold/lightgold3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Dark Gold",
@@ -141,7 +156,8 @@
       "img/tema/darkgold/darkgold1.webp",
       "img/tema/darkgold/darkgold2.webp",
       "img/tema/darkgold/darkgold3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Navy",
@@ -150,7 +166,8 @@
       "img/tema/navy/navy1.webp",
       "img/tema/navy/navy2.webp",
       "img/tema/navy/navy3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Maroon",
@@ -159,7 +176,8 @@
       "img/tema/maroon/maroon1.webp",
       "img/tema/maroon/maroon2.webp",
       "img/tema/maroon/maroon3.webp"
-    ]
+    ],
+    "likes": 0
   },
   {
     "nama": "Cream Purple",
@@ -168,6 +186,7 @@
       "img/tema/creampurple/creampurple1.webp",
       "img/tema/creampurple/creampurple2.webp",
       "img/tema/creampurple/creampurple3.webp"
-    ]
+    ],
+    "likes": 0
   }
 ]
