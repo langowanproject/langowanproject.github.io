@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="repo/gift.css">
     <link rel="stylesheet" href="repo/guestbook.css">
     <link rel="stylesheet" href="repo/hashover.css">
-    <style>
+        <style>
         .loading-spinner {
             display: block;
             width: 20px;
@@ -47,9 +47,13 @@
             justify-content: center;
             gap: 8px;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
-<body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
+<body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false" >
     <header>
         <div class="popup">
             <div class="popup-wrap">
@@ -86,12 +90,12 @@
                 <div id="input-acara"></div>
                 <div class="card-wrap">
                     <div class="bottom">
-                        <div class="card2">
-                            <h4>Save The Date</h4>
-                            <div class="tanggal-acara1"></div>
-                            <div class="simply-countdown"></div>
-                            <div id="countdown-btn"></div>
-                        </div>
+                    <div class="card2">
+                        <h4>Save The Date</h4>
+                        <div class="tanggal-acara1"></div>
+                        <div class="simply-countdown"></div>
+                        <div id="countdown-btn"></div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -158,13 +162,6 @@
 
     <!-- SCRIPT -->
     <script>
-        // Fungsi untuk mengganti nama undangan di <h4> dan mengupdate URL hash
-        function updateInvitationName(name) {
-            document.getElementById('default').textContent = name;
-            const hash = name.replace(/\s+/g, '_');
-            window.location.hash = hash;
-        }
-
         // Fungsi untuk menampilkan/menyembunyikan loading
         function toggleLoading(show) {
             const spinner = document.querySelector('.loading-spinner');
@@ -180,34 +177,44 @@
                 buttonText.style.display = 'block';
                 openButton.disabled = false;
             }
+            console.log('Loading:', show ? 'Aktif' : 'Nonaktif');
         }
 
-        // Fungsi untuk membaca daftar nama dari file .txt
-        async function loadNames() {
-            toggleLoading(true);
-            
-            try {
-                const response = await fetch('data-input/daftar-nama.txt');
-                if (!response.ok) throw new Error('Network response was not ok');
-                const text = await response.text();
-                const names = text.split('\n').map(name => name.trim()).filter(Boolean);
+        // Fungsi untuk mengambil hash dari URL dan mengubahnya menjadi nama
+        function updateNameFromHash() {
+            toggleLoading(true); // Tampilkan loading
 
-                const hash = decodeURIComponent(window.location.hash.substring(1)).replace(/_/g, ' ');
-                if (hash && names.includes(hash)) {
-                    updateInvitationName(hash);
-                } else {
-                    updateInvitationName(names[0]);
+            try {
+                // Mendapatkan hash dari URL
+                const hash = window.location.hash.substring(1); // Menghapus karakter '#' dari awal hash
+
+                // Daftar anchor yang tidak boleh mengubah nama
+                const reservedAnchors = ['ucapan', 'galeri', 'acara', 'cerita', 'gift', 'home', 'profil'];
+
+                // Memeriksa apakah hash mengandung nama tamu atau anchor yang sudah ditentukan
+                if (hash && !reservedAnchors.includes(hash)) {
+                    // Mengganti tanda '_' dengan spasi
+                    const name = hash.replace(/_/g, ' ');
+
+                    // Mengambil elemen <h4> dengan id "default"
+                    const nameElement = document.getElementById('default');
+
+                    // Update teks di elemen <h4>
+                    nameElement.textContent = name;
                 }
             } catch (error) {
                 console.error('Error loading names:', error);
             } finally {
-                toggleLoading(false);
+                toggleLoading(false); // Sembunyikan loading setelah selesai
             }
         }
 
-        // Panggil fungsi saat halaman selesai dimuat
-        window.onload = loadNames;
-    </script>
+        // Memanggil fungsi saat halaman dimuat
+        window.addEventListener('load', updateNameFromHash);
+
+        // Memanggil fungsi saat hash URL berubah
+        window.addEventListener('hashchange', updateNameFromHash);
+    </script>        
     
     <script src="repo/navbar-popup.js" defer></script>
     <script src="repo/data-input.js" defer></script>
