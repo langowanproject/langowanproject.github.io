@@ -48,6 +48,10 @@
             justify-content: center;
             gap: 8px;
         }
+        
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false" >
@@ -159,36 +163,6 @@
 
     <!-- SCRIPT -->
     <script>
-        // Fungsi untuk mengganti nama undangan di <h4> dan mengupdate URL hash
-        function updateInvitationName(name) {
-            document.getElementById('default').textContent = name; // Menggunakan ID 'default'
-            const hash = name.replace(/\s+/g, '_'); // Mengganti spasi dengan underscore
-            window.location.hash = hash;
-        }
-
-        // Fungsi untuk membaca daftar nama dari file .txt
-        async function loadNames() {
-            const response = await fetch('data-input/daftar-nama.txt'); // Pastikan file ini berada di direktori yang sama
-            const text = await response.text();
-            const names = text.split('\n').map(name => name.trim()).filter(Boolean);
-
-            // Cek apakah ada hash di URL
-            const hash = decodeURIComponent(window.location.hash.substring(1)).replace(/_/g, ' '); // Mengganti underscore dengan spasi
-            if (hash && names.includes(hash)) {
-                updateInvitationName(hash);
-            } else {
-                // Pilih nama pertama sebagai default jika tidak ada hash
-                updateInvitationName(names[0]);
-            }
-        }
-
-        // Panggil fungsi saat halaman selesai dimuat
-        window.onload = function() {
-            loadNames();
-        };
-    </script>
-    
-    <script>
         // Fungsi untuk menampilkan/menyembunyikan loading
         function toggleLoading(show) {
             const spinner = document.querySelector('.loading-spinner');
@@ -204,53 +178,61 @@
                 buttonText.style.display = 'block';
                 openButton.disabled = false;
             }
+            console.log('Loading:', show ? 'Aktif' : 'Nonaktif');
         }
 
-        // Fungsi untuk membaca daftar nama dari file .txt
-        async function loadNames() {
+        // Fungsi untuk mengambil hash dari URL dan mengubahnya menjadi nama
+        function updateNameFromHash() {
             toggleLoading(true); // Tampilkan loading
-            
-            try {
-                const response = await fetch('data-input/daftar-nama.txt');
-                const text = await response.text();
-                const names = text.split('\n').map(name => name.trim()).filter(Boolean);
 
-                // Cek apakah ada hash di URL
-                const hash = decodeURIComponent(window.location.hash.substring(1)).replace(/_/g, ' ');
-                if (hash && names.includes(hash)) {
-                    updateInvitationName(hash);
-                } else {
-                    updateInvitationName(names[0]);
+            try {
+                // Mendapatkan hash dari URL
+                const hash = window.location.hash.substring(1); // Menghapus karakter '#' dari awal hash
+
+                // Daftar anchor yang tidak boleh mengubah nama
+                const reservedAnchors = ['ucapan', 'galeri', 'acara', 'cerita', 'gift', 'home', 'profil'];
+
+                // Memeriksa apakah hash mengandung nama tamu atau anchor yang sudah ditentukan
+                if (hash && !reservedAnchors.includes(hash)) {
+                    // Mengganti tanda '_' dengan spasi
+                    const name = hash.replace(/_/g, ' ');
+
+                    // Mengambil elemen <h4> dengan id "default"
+                    const nameElement = document.getElementById('default');
+
+                    // Update teks di elemen <h4>
+                    nameElement.textContent = name;
                 }
             } catch (error) {
                 console.error('Error loading names:', error);
             } finally {
-                toggleLoading(false); // Sembunyikan loading
+                toggleLoading(false); // Sembunyikan loading setelah selesai
             }
         }
 
-        // Panggil fungsi saat halaman selesai dimuat
-        window.onload = function() {
-            loadNames();
-        };
-    </script>
+        // Memanggil fungsi saat halaman dimuat
+        window.addEventListener('load', updateNameFromHash);
+
+        // Memanggil fungsi saat hash URL berubah
+        window.addEventListener('hashchange', updateNameFromHash);
+    </script>        
     
     <script src="repo/navbar-popup.js" defer></script>
-    <script src="repo/data-input.js"></script>
-    <script src="repo/reveal.js"></script>
-    <script src="repo/home.js"></script>
-    <script src="repo/profil.js"></script>
-    <script src="repo/acara.js"></script>
-    <script src="repo/countdownsimply.js"></script>
-    <script src="repo/countdown.js"></script>
+    <script src="repo/data-input.js" defer></script>
+    <script src="repo/reveal.js" defer></script>
+    <script src="repo/home.js" defer></script>
+    <script src="repo/profil.js" defer></script>
+    <script src="repo/acara.js" defer></script>
+    <script src="repo/countdownsimply.js" defer></script>
+    <script src="repo/countdown.js" defer></script>
     <script src="repo/gallery.js" defer></script>
-    <script src="repo/cerita.js"></script>
-    <script src="repo/gift.js"></script>
-    <script src="repo/gift-icon.js"></script>
-    <script src="repo/guestbook.js"></script>
-    <script src="repo/hashover.js"></script>
-    <script src="repo/copy.js"></script>
-    <script src="repo/copy-alert.js"></script>
+    <script src="repo/cerita.js" defer></script>
+    <script src="repo/gift.js" defer></script>
+    <script src="repo/gift-icon.js" defer></script>
+    <script src="repo/guestbook.js" defer></script>
+    <script src="repo/hashover.js" defer></script>
+    <script src="repo/copy.js" defer></script>
+    <script src="repo/copy-alert.js" defer></script>
     <script type="module" src="repo/minidenticons.min.js" defer></script>
 </body>
 </html>
