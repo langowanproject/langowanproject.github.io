@@ -1,275 +1,200 @@
 [
   {
     "nama": "White Rose Paper",
-    "warna": [
-      "putih",
-      "abu-abu",
-      "hijau",
-      "terang",
-      "netral"
-    ],
+    "warna": ["putih", "abu-abu", "hijau", "terang", "netral"],
     "gambar": [
       "img/tema/whiterosepaper/whiterosepaper1.webp",
       "img/tema/whiterosepaper/whiterosepaper2.webp",
       "img/tema/whiterosepaper/whiterosepaper3.webp"
-    ],
-    "likes": null
+    ]
   },
   {
     "nama": "Beige Minimalist",
-    "warna": [
-      "pastel",
-      "krem",
-      "terang",
-      "netral"
-    ],
+    "warna": ["pastel", "krem", "terang", "netral"],
     "gambar": [
       "img/tema/beigeminimalist/beigeminimalist1.webp",
       "img/tema/beigeminimalist/beigeminimalist2.webp",
       "img/tema/beigeminimalist/beigeminimalist3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Black Minimalist",
-    "warna": [
-      "hitam",
-      "gelap"
-    ],
+    "warna": ["hitam", "gelap"],
     "gambar": [
       "img/tema/blackminimalist/blackminimalist1.webp",
       "img/tema/blackminimalist/blackminimalist2.webp",
-      "img/tema/blackminimalist/blackminimalist3.webp"
+      "img/tema/blackminimalist/blackminimalist3.webp
     ]
   },
   {
     "nama": "Brown Teepee",
-    "warna": [
-      "cokelat",
-      "pastel",
-      "light"
-    ],
+    "warna": ["cokelat", "pastel", "light"],
     "gambar": [
       "img/tema/brownteepee/brownteepee1.webp",
       "img/tema/brownteepee/brownteepee2.webp",
       "img/tema/brownteepee/brownteepee3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Watercolor Floral",
-    "warna": [
-      "pastel",
-      "kuning",
-      "terang",
-      "biru"
-    ],
+    "warna": ["pastel", "kuning", "terang", "biru"],
     "gambar": [
       "img/tema/watercolorfloral/watercolorfloral1.webp",
       "img/tema/watercolorfloral/watercolorfloral2.webp",
       "img/tema/watercolorfloral/watercolorfloral3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Blue Floral",
-    "warna": [
-      "biru",
-      "pastel",
-      "terang"
-    ],
+    "warna": ["biru", "pastel", "terang"],
     "gambar": [
       "img/tema/bluefloral/bluefloral1.webp",
       "img/tema/bluefloral/bluefloral2.webp",
       "img/tema/bluefloral/bluefloral3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Pink Floral",
-    "warna": [
-      "pink",
-      "pastel",
-      "terang"
-    ],
+    "warna": ["pink", "pastel", "terang"],
     "gambar": [
       "img/tema/pinkfloral/pinkfloral1.webp",
       "img/tema/pinkfloral/pinkfloral2.webp",
       "img/tema/pinkfloral/pinkfloral3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Light",
-    "warna": [
-      "putih",
-      "abu-abu",
-      "terang"
-    ],
+    "warna": ["putih", "abu-abu", "terang"],
     "gambar": [
       "img/tema/light/light1.webp",
       "img/tema/light/light2.webp",
       "img/tema/light/light3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Dark",
-    "warna": [
-      "hitam",
-      "abu-abu",
-      "gelap"
-    ],
+    "warna": ["hitam", "abu-abu", "gelap"],
     "gambar": [
       "img/tema/dark/dark1.webp",
       "img/tema/dark/dark2.webp",
       "img/tema/dark/dark3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Light Blue",
-    "warna": [
-      "biru",
-      "terang",
-      "putih"
-    ],
+    "warna": ["biru", "terang", "putih"],
     "gambar": [
       "img/tema/lightblue/lightblue1.webp",
       "img/tema/lightblue/lightblue2.webp",
       "img/tema/lightblue/lightblue3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Dark Blue",
-    "warna": [
-      "biru",
-      "gelap",
-      "hitam",
-      "abu-abu"
-    ],
+    "warna": ["biru", "gelap", "hitam", "abu-abu"],
     "gambar": [
       "img/tema/darkblue/darkblue1.webp",
       "img/tema/darkblue/darkblue2.webp",
       "img/tema/darkblue/darkblue3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Light Pinky Peach",
-    "warna": [
-      "pink",
-      "peach",
-      "terang",
-      "putih",
-      "pastel"
-    ],
+    "warna": ["pink", "peach", "terang", "putih", "pastel"],
     "gambar": [
       "img/tema/lightpinkypeach/lightpinkypeach1.webp",
       "img/tema/lightpinkypeach/lightpinkypeach2.webp",
       "img/tema/lightpinkypeach/lightpinkypeach3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Dark Pinky Peach",
-    "warna": [
-      "pink",
-      "peach",
-      "gelap",
-      "abu-abu",
-      "hitam",
-      "pastel"
-    ],
+    "warna": ["pink", "peach", "gelap", "abu-abu", "hitam", "pastel"],
     "gambar": [
       "img/tema/darkpinkypeach/darkpinkypeach1.webp",
       "img/tema/darkpinkypeach/darkpinkypeach2.webp",
       "img/tema/darkpinkypeach/darkpinkypeach3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Light Red",
-    "warna": [
-      "merah",
-      "terang",
-      "putih"
-    ],
+    "warna": ["merah", "terang", "putih"],
     "gambar": [
       "img/tema/lightred/lightred1.webp",
       "img/tema/lightred/lightred2.webp",
       "img/tema/lightred/lightred3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Dark Red",
-    "warna": [
-      "merah",
-      "gelap",
-      "abu-abu",
-      "hitam"
-    ],
+    "warna": ["merah", "gelap", "abu-abu", "hitam"],
     "gambar": [
       "img/tema/darkred/darkred1.webp",
       "img/tema/darkred/darkred2.webp",
       "img/tema/darkred/darkred3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Light Gold",
-    "warna": [
-      "emas",
-      "terang",
-      "putih"
-    ],
+    "warna": ["emas", "terang", "putih"],
     "gambar": [
       "img/tema/lightgold/lightgold1.webp",
       "img/tema/lightgold/lightgold2.webp",
       "img/tema/lightgold/lightgold3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Dark Gold",
-    "warna": [
-      "emas",
-      "gelap",
-      "hitam",
-      "abu-abu"
-    ],
+    "warna": ["emas", "gelap", "hitam", "abu-abu"],
     "gambar": [
       "img/tema/darkgold/darkgold1.webp",
       "img/tema/darkgold/darkgold2.webp",
       "img/tema/darkgold/darkgold3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Navy",
-    "warna": [
-      "biru",
-      "gelap",
-      "kelasi"
-    ],
+    "warna": ["biru", "gelap", "kelasi"],
     "gambar": [
       "img/tema/navy/navy1.webp",
       "img/tema/navy/navy2.webp",
       "img/tema/navy/navy3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Maroon",
-    "warna": [
-      "merah",
-      "gelap",
-      "manggis"
-    ],
+    "warna": ["merah", "gelap", "manggis"],
     "gambar": [
       "img/tema/maroon/maroon1.webp",
       "img/tema/maroon/maroon2.webp",
       "img/tema/maroon/maroon3.webp"
-    ]
+    ],
+    "like": 0
   },
   {
     "nama": "Cream Purple",
-    "warna": [
-      "ungu",
-      "krem",
-      "kuning",
-      "terang"
-    ],
+    "warna": ["ungu", "krem", "kuning", "terang"],
     "gambar": [
       "img/tema/creampurple/creampurple1.webp",
       "img/tema/creampurple/creampurple2.webp",
       "img/tema/creampurple/creampurple3.webp"
-    ]
+    ],
+    "like": 0
   }
 ]
