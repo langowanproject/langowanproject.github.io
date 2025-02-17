@@ -140,7 +140,7 @@
       "img/tema/lightblue/lightblue2.webp",
       "img/tema/lightblue/lightblue3.webp"
     ],
-    "likes": 0
+    "likes": 1
   },
   {
     "nama": "Dark Blue",
@@ -155,7 +155,7 @@
       "img/tema/darkblue/darkblue2.webp",
       "img/tema/darkblue/darkblue3.webp"
     ],
-    "likes": 1
+    "likes": 0
   },
   {
     "nama": "Light Pinky Peach",
@@ -171,7 +171,7 @@
       "img/tema/lightpinkypeach/lightpinkypeach2.webp",
       "img/tema/lightpinkypeach/lightpinkypeach3.webp"
     ],
-    "likes": 0
+    "likes": 1
   },
   {
     "nama": "Dark Pinky Peach",
