@@ -4,34 +4,34 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="card-container">
         <h3>Bride & Groom</h3>
         <div class="card-wrap">
-            <div class="card top">
+            <div class="card1 top">
                 <h4 class="judul-quotes1"></h4>
                 <p class="quotes1"></p>
                 <h5 class="sumber-quotes1"></h5>
             </div>
         </div>
         <div class="card-wrap">
-            <div class="card6 left">
-                <div class="box bride-image"></div>
-                <h4 class="bride"></h4>
-                <p class="biodata-bride"></p>
-                <div class="item-acara">
-                    <span><h5 class="icon">c</h5></span>
-                    <h5 class="alamat-bride"></h5>
-                </div>
-            </div>
-            <div class="card7 right">
+            <div class="card4 left">
                 <div class="box groom-image"></div>
                 <h4 class="groom"></h4>
-                <p class="biodata-groom"></p>
+                <p>Anak <span class="groom-anak-ke"></span> dari Bapak <span class="ayah-groom"></span> dan Ibu <span class="ibu-groom"></span></p>
                 <div class="item-acara">
-                    <span><h5 class="icon">c</h5></span>
+                    <span><h5 class="icon">c</h5></span><br>
                     <h5 class="alamat-groom"></h5>
+                </div>
+            </div>
+            <div class="card5 right">
+                <div class="box bride-image"></div>
+                <h4 class="bride"></h4>
+                <p>Anak <span class="bride-anak-ke"></span> dari Bapak <span class="ayah-bride"></span> dan Ibu <span class="ibu-bride"></span></p>
+                <div class="item-acara">
+                    <span><h5 class="icon">c</h5></span><br>
+                    <h5 class="alamat-bride"></h5>
                 </div>
             </div>
         </div>
         <div class="card-wrap">
-            <div class="card bottom">
+            <div class="card2 bottom">
                 <h4 class="judul-quotes2"></h4>
                 <p class="quotes2"></p>
                 <h5 class="sumber-quotes2"></h5>
