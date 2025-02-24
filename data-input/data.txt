@@ -22,12 +22,12 @@ alamat-bride: 10
 quotes-required: Tidak
 
 ("QUOTES 01")
-quotes1: 
-sumber-quotes1: 
+quotes1: shs
+sumber-quotes1: sbshsh
 
 ("QUOTES 02")
-quotes2: 
-sumber-quotes2: 
+quotes2: shsh
+sumber-quotes2: vhhd
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
