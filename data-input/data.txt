@@ -19,15 +19,15 @@ Ibu-bride: 9
 alamat-bride: 10
 
 ("PAKAI QUOTES")
-quotes-required: Tidak
+quotes-required: Ya
 
 ("QUOTES 01")
-quotes1: hhjs
-sumber-quotes1: znznnz
+quotes1: 11ksmznzmmzkz
+sumber-quotes1: 12zznzmMmMK
 
 ("QUOTES 02")
-quotes2: bhhzz
-sumber-quotes2: zhzhhz
+quotes2: 13ZBZBJZJZJZ
+sumber-quotes2: 14KSKSKS
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
