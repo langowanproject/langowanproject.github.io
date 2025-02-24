@@ -37,7 +37,7 @@ waktu-acara1:
 tempat-acara1:
 
 nama-acara2: Resepsi Pernikahan
-tanggal-acara2: Kamis, 21 Agustus 2025
+tanggal-acara2: Selasa, 12 Agustus 2025
 waktu-acara2:
 tempat-acara2:
 
