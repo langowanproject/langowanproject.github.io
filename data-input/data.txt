@@ -5,26 +5,29 @@ title: Romeo & Juliet
 token: https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt
 
 ("GROOM")
-groom: 
+groom: Romeo Montague
 groom-anak-ke: Pertama
-Ayah-groom: 
-Ibu-groom: 
-alamat-groom: 
+Ayah-groom: Lorem Montague
+Ibu-groom: Ipsum Guemonta
+alamat-groom: Langowan
 
 ("BRIDE")
-bride: 
-bride-anak-ke: Pertama
-Ayah-bride: 
-Ibu-bride: 
-alamat-bride: 
+bride: Juliet Capulet
+bride-anak-ke: Kedua
+Ayah-bride: Ipsum Capulet
+Ibu-bride: Lorem Letcapu
+alamat-bride: Tondano
+
+("PAKAI QUOTES")
+quotes-required: Tidak
 
 ("QUOTES 01")
-quotes1: Gggg
-sumber-quotes1: Ggg
+quotes1: "Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging."
+sumber-quotes1: Kejadian 2 ∶ 24
 
 ("QUOTES 02")
-quotes2: Ggggkkk
-sumber-quotes2: Bsjs
+quotes2: "Have a good and godly marriage that shows the world Christ's love through how you sacrificially love and serve one another."
+sumber-quotes2: —John Stange
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
