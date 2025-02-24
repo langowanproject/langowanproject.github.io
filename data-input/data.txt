@@ -5,18 +5,18 @@ title: Romeo & Juliet
 token: https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt
 
 ("GROOM")
-groom: As
-groom-anak-ke: Ketujuh
-Ayah-groom: Xxx
-Ibu-groom: Hdjdjnd
-alamat-groom: Jfjfhf
+groom: 1
+groom-anak-ke: Kedua
+Ayah-groom: 3
+Ibu-groom: 4
+alamat-groom: 5
 
 ("BRIDE")
-bride: Dhdh
-bride-anak-ke: Ketiga
-Ayah-bride: Xhdhdu
-Ibu-bride: Bxbxh
-alamat-bride: Xhhx
+bride: 6
+bride-anak-ke: Ketujuh
+Ayah-bride: 8
+Ibu-bride: 9
+alamat-bride: 10
 
 ("PAKAI QUOTES")
 quotes-required: Tidak
