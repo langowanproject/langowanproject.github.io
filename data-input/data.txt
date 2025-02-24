@@ -19,11 +19,11 @@ Ibu-bride: Lorem Letcapu
 alamat-bride: Tondano
 
 ("PAKAI QUOTES")
-quotes-required: Ya
+quotes-required: Tidak
 
 ("QUOTES 01")
-quotes1: Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging.
-sumber-quotes1: Kejadian 2:24
+quotes1: 
+sumber-quotes1: 
 
 ("QUOTES 02")
 quotes2: 
