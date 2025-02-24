@@ -19,7 +19,7 @@ Ibu-bride: 9
 alamat-bride: 10
 
 ("PAKAI QUOTES")
-quotes-required: Ya
+quotes-required: Tidak
 
 ("QUOTES 01")
 quotes1: Hshss
