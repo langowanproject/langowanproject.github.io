@@ -32,9 +32,9 @@ sumber-quotes2:
 ========== PEMBERKATAN DAN RESEPSI ==========
 
 nama-acara1: Pemberkatan Nikah
-tanggal-acara1: Selasa, 12 Agustus 2026
-waktu-acara1: 10.00 WITA
-tempat-acara1: GMIM Imanuel Leilem
+tanggal-acara1: Selasa, 12 Agustus 2025
+waktu-acara1: 13.00 WITA
+tempat-acara1: GKII Antiokhia Langowan
 
 nama-acara2: Resepsi Pernikahan
 tanggal-acara2: Rabu, 13 Agustus 2026
