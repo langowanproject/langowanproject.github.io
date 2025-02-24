@@ -42,7 +42,7 @@ waktu-acara2: Pukul 06.02 WITA
 tempat-acara2: Bbbb
 
 alamat url acara1
-url-1: https://www.google.com/maps?q=1.1590496809170865,124.83738344402927
+url-1: https://www.google.com/maps?q=1.135176,124.8543959
 
 alamat url acara2
 url-2: https://www.google.com/maps?q=1.1579454778065958,124.84751447850553
