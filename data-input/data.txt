@@ -32,7 +32,7 @@ sumber-quotes2:
 ========== PEMBERKATAN DAN RESEPSI ==========
 
 nama-acara1: Pemberkatan Nikah
-tanggal-acara1: Rabu, 26 Februari 2025
+tanggal-acara1: Jumat, 28 Februari 2025
 waktu-acara1: 
 tempat-acara1: 
 
