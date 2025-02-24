@@ -37,8 +37,8 @@ waktu-acara1: 13.00 WITA
 tempat-acara1: GKII Antiokhia Langowan
 
 nama-acara2: Resepsi Pernikahan
-tanggal-acara2: Rabu, 13 Agustus 2026
-waktu-acara2: 18.00 WITA
+tanggal-acara2: Selasa, 12 Agustus 2025
+waktu-acara2: 17.00 WITA
 tempat-acara2: Four Points by Sheraton Manado
 
 alamat url acara1
