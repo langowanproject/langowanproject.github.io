@@ -45,7 +45,7 @@ alamat url acara1
 url-1: https://www.google.com/maps?q=1.135176,124.8543959
 
 alamat url acara2
-url-2: https://www.google.com/maps?q=1.1579454778065958,124.84751447850553
+url-2: https://www.google.com/maps?q=1.1473703,124.8425806
 
 alamat url kalender
 url-3: kalender.html
