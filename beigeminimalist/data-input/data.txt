@@ -18,6 +18,8 @@ Ayah-bride: Ipsum Capulet
 Ibu-bride: Lorem Letcapu
 alamat-bride: Tondano
 
+quotes-required: Ya
+
 ("QUOTES 01")
 quotes1: "Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging."
 sumber-quotes1: Kejadian 2 ∶ 24
