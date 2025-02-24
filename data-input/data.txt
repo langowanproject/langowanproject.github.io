@@ -5,18 +5,18 @@ title: Romeo & Juliet
 token: https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt
 
 ("GROOM")
-groom: Romeo Montague
+groom: 
 groom-anak-ke: Pertama
-Ayah-groom: Lorem Montague
-Ibu-groom: Ipsum Guemonta
-alamat-groom: Langowan
+Ayah-groom: 
+Ibu-groom: 
+alamat-groom: 
 
 ("BRIDE")
-bride: Juliet Capulet
-bride-anak-ke: Kedua
-Ayah-bride: Ipsum Capulet
-Ibu-bride: Lorem Letcapu
-alamat-bride: Tondano
+bride: 
+bride-anak-ke: Pertama
+Ayah-bride: 
+Ibu-bride: 
+alamat-bride: 
 
 ("QUOTES 01")
 quotes1: "Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging."
