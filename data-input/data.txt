@@ -19,12 +19,12 @@ Ibu-bride:
 alamat-bride: 
 
 ("QUOTES 01")
-quotes1: "Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging."
-sumber-quotes1: Kejadian 2 ∶ 24
+quotes1: Gggg
+sumber-quotes1: Ggg
 
 ("QUOTES 02")
-quotes2: "Have a good and godly marriage that shows the world Christ's love through how you sacrificially love and serve one another."
-sumber-quotes2: —John Stange
+quotes2: Ggggkkk
+sumber-quotes2: Bsjs
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
