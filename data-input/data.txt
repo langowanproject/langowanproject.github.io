@@ -22,12 +22,12 @@ alamat-bride: Tondano
 quotes-required: Tidak
 
 ("QUOTES 01")
-quotes1: 11111
-sumber-quotes1: 2222
+quotes1: Zbx
+sumber-quotes1: I
 
 ("QUOTES 02")
-quotes2: 3333333
-sumber-quotes2: 444444
+quotes2: Hd
+sumber-quotes2: Du
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
