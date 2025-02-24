@@ -5,18 +5,18 @@ title: Romeo & Juliet
 token: https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt
 
 ("GROOM")
-groom: 1
+groom: Romeo Montague
 groom-anak-ke: Kedua
-Ayah-groom: 3
-Ibu-groom: 4
-alamat-groom: 5
+Ayah-groom: Lorem Montague
+Ibu-groom: Ipsum Guemontag
+alamat-groom: Langowan
 
 ("BRIDE")
-bride: 6
-bride-anak-ke: Ketujuh
-Ayah-bride: 8
-Ibu-bride: 9
-alamat-bride: 10
+bride: Juliet Capulet
+bride-anak-ke: Ketiga
+Ayah-bride: Ipsum Capulet
+Ibu-bride: Lorm Letcapu
+alamat-bride: Tondano
 
 ("PAKAI QUOTES")
 quotes-required: Ya
