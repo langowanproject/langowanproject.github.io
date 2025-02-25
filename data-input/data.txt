@@ -19,15 +19,15 @@ Ibu-bride: Hhhhhh
 alamat-bride: Iiiiii
 
 ("PAKAI QUOTES")
-quotes-required: Ya
+quotes-required: Tidak
 
 ("QUOTES 01")
-quotes1: Quotes 1
-sumber-quotes1: 1
+quotes1: 
+sumber-quotes1: 
 
 ("QUOTES 02")
-quotes2: Quotes 2
-sumber-quotes2: 2
+quotes2: 
+sumber-quotes2: 
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
