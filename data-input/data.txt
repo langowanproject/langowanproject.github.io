@@ -5,18 +5,18 @@ title: Romeo & Juliet
 token: https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt
 
 ("GROOM")
-groom: Samuel Sumilat
-groom-anak-ke: Kedua
-Ayah-groom: Adry Sumilat
-Ibu-groom: Ira Hartutik
-alamat-groom: Langowan
+groom: Sssssss
+groom-anak-ke: Kesepuluh
+Ayah-groom: Ggggg
+Ibu-groom: Hhhhh
+alamat-groom: Iiiii
 
 ("BRIDE")
-bride: Praisy Tombuku
-bride-anak-ke: Ketiga
-Ayah-bride: Meidy Tombuku
-Ibu-bride: Meike Sumanti
-alamat-bride: Tondano
+bride: Sssssss
+bride-anak-ke: Kesebelas
+Ayah-bride: Gggg
+Ibu-bride: Hhhhhh
+alamat-bride: Iiiiii
 
 ("PAKAI QUOTES")
 quotes-required: Ya
