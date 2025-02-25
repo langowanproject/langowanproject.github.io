@@ -60,7 +60,7 @@ url-video: https://ia903401.us.archive.org/23/items/wedding-video_202502/wedding
 ========== "KISAH KAMI" ==========
 
 ("PAKAI KISAH KAMI")
-cerita-required: Ya
+cerita-required: Tidak
 
 waktu-cerita-1: 
 judul-cerita-1: Pertama Kali Kenal
