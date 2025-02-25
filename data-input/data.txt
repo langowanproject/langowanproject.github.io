@@ -42,7 +42,7 @@ waktu-acara2: Pukul 04.00 WITA
 tempat-acara2: Tondano
 
 alamat url acara1
-url-1: https://www.google.com/maps?q=1.1579566762466111,124.84748579204225
+url-1: https://www.google.com/maps?q=1.1583565228129042,124.83632626723669
 
 alamat url acara2
 url-2: https://www.google.com/maps?q=0.6637618810944287,124.16540112765436
