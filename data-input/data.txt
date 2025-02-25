@@ -42,7 +42,7 @@ waktu-acara2: Pukul 14.40 WITA
 tempat-acara2: Hxjxj
 
 alamat url acara1
-url-1: https://www.google.com/maps?q=1.1583565228129042,124.83632626723669
+url-1: https://www.google.com/maps?q=1.3085821,124.9155032
 
 alamat url acara2
 url-2: https://www.google.com/maps?q=0.6637618810944287,124.16540112765436
