@@ -60,23 +60,23 @@ url-video: https://ia903401.us.archive.org/23/items/wedding-video_202502/wedding
 ========== "KISAH KAMI" ==========
 
 ("PAKAI KISAH KAMI")
-cerita-required: Tidak
+cerita-required: Ya
 
-waktu-cerita-1: 
+waktu-cerita-1: 2
 judul-cerita-1: Pertama Kali Kenal
-isi-cerita-1: 
+isi-cerita-1: 3
 
-waktu-cerita-2: 
-judul-cerita-2: Pertama Kali Kenal
-isi-cerita-2: 
+waktu-cerita-2: 5
+judul-cerita-2: Mulai Dekat
+isi-cerita-2: 6
 
-waktu-cerita-3: 
-judul-cerita-3: Pertama Kali Kenal
-isi-cerita-3: 
+waktu-cerita-3: 8
+judul-cerita-3: Mulai Serius
+isi-cerita-3: 9
 
-waktu-cerita-4: 
-judul-cerita-4: Pertama Kali Kenal
-isi-cerita-4: 
+waktu-cerita-4: 11
+judul-cerita-4: Menyatakan Cinta
+isi-cerita-4: 12
 
 ========== "GIFT" ==========
 rekening-1: 1728593876
