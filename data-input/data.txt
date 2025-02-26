@@ -60,23 +60,23 @@ url-video: https://ia903401.us.archive.org/23/items/wedding-video_202502/wedding
 ========== "KISAH KAMI" ==========
 
 ("PAKAI KISAH KAMI")
-cerita-required: Ya
+cerita-required: Tidak
 
-waktu-cerita-1: Januari 2021
+waktu-cerita-1: 
 judul-cerita-1: Pertama Kali Kenal
-isi-cerita-1: Pertemuan pertama kami mungkin terasa biasa, tetapi siapa sangka itu adalah awal dari perjalanan yang berarti. Dari sekadar saling mengenal, obrolan ringan mulai mengalir, menghadirkan tawa dan rasa penasaran. Hari demi hari, kami semakin memahami satu sama lain, membangun fondasi kebersamaan yang perlahan tumbuh menjadi sesuatu yang lebih spesial.
+isi-cerita-1: 
 
-waktu-cerita-2: Mei 2022
-judul-cerita-2: Mulai Dekat
-isi-cerita-2: Seiring berjalannya waktu, kami semakin mengenal satu sama lain. Percakapan yang dulu sekadar basa-basi kini berubah menjadi diskusi mendalam tentang mimpi, harapan, dan masa depan. Kebersamaan yang terasa nyaman membuat kami sadar bahwa ada sesuatu yang lebih dari sekadar pertemanan.
+waktu-cerita-2: 
+judul-cerita-2: Pertama Kali Kenal
+isi-cerita-2: 
 
-waktu-cerita-3: Juli 2022
-judul-cerita-3: Menyatakan Cinta
-isi-cerita-3: Saat itu, perasaan yang terpendam akhirnya terucap. Dengan penuh keberanian, aku mengungkapkan apa yang selama ini ada di hati. Kekhawatiran akan jawaban yang mungkin kudapatkan perlahan tergantikan oleh senyuman manis dan tatapan penuh kasih. Hari itu menjadi awal dari babak baru dalam perjalanan kami.
+waktu-cerita-3: 
+judul-cerita-3: Pertama Kali Kenal
+isi-cerita-3: 
 
-waktu-cerita-4: Agustus 2023
-judul-cerita-4: Tunangan
-isi-cerita-4: Setelah melewati banyak momen bersama, akhirnya kami memutuskan untuk membawa hubungan ini ke tahap yang lebih serius. Dalam suasana penuh kebahagiaan, cincin disematkan sebagai tanda janji untuk melangkah ke masa depan bersama. Momen ini menjadi bukti bahwa perjalanan cinta kami semakin dekat menuju ikatan yang lebih kuat.
+waktu-cerita-4: 
+judul-cerita-4: Pertama Kali Kenal
+isi-cerita-4: 
 
 ========== "GIFT" ==========
 
