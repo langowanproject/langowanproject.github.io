@@ -1,51 +1,51 @@
-title: Romeo & Juliet
+title: Undangan Pernikahan
 
 ========== "DATA" ==========
 
 token: https://ia600806.us.archive.org/14/items/token_20250208_1045/token.txt
 
 ("GROOM")
-groom: Sssssss
-groom-anak-ke: Kesepuluh
-Ayah-groom: Ggggg
-Ibu-groom: Hhhhh
-alamat-groom: Iiiii
+groom: Romeo Montague
+groom-anak-ke: Pertama
+Ayah-groom: Lorem Montague
+Ibu-groom: Ipsum Guemonta
+alamat-groom: Langowan
 
 ("BRIDE")
-bride: Sssssss
-bride-anak-ke: Kesebelas
-Ayah-bride: Gggg
-Ibu-bride: Hhhhhh
-alamat-bride: Iiiiii
+bride: Juliet Capulet
+bride-anak-ke: Kedua
+Ayah-bride: Ipsum Capulet
+Ibu-bride: Lorem Letcapu
+alamat-bride: Tondano
 
 ("PAKAI QUOTES")
 quotes-required: Ya
 
 ("QUOTES 01")
-quotes1: Sbjssnns
-sumber-quotes1: Hhsh
+quotes1: "Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan istrinya, sehingga keduanya menjadi satu daging."
+sumber-quotes1: Kejadian 2 ∶ 24
 
 ("QUOTES 02")
-quotes2: Hdsjdjshhs
-sumber-quotes2: Sfafa
+quotes2: "Have a good and godly marriage that shows the world Christ's love through how you sacrificially love and serve one another."
+sumber-quotes2: —John Stange
 
 ========== PEMBERKATAN DAN RESEPSI ==========
 
-nama-acara1: Akad Nikah
-tanggal-acara1: Selasa, 25 Februari 2025
-waktu-acara1: Pukul 14.40 WIT
-tempat-acara1: Bxbzmz
+nama-acara1: Pemberkatan Nikah
+tanggal-acara1: Selasa, 12 Agustus 2026
+waktu-acara1: Pukul 12.00 Wita
+tempat-acara1: GMIM Imanuel Leilem
 
 nama-acara2: Resepsi Pernikahan
-tanggal-acara2: Selasa, 25 Februari 2025
-waktu-acara2: Pukul 14.40 WITA
-tempat-acara2: Hxjxj
+tanggal-acara2: Selasa, 12 Agustus 2026
+waktu-acara2: Pukul 16.00 Wita
+tempat-acara2: Four Points by Sheraton Manado
 
 alamat url acara1
-url-1: https://www.google.com/maps?q=1.3085821,124.9155032
+url-1: https://www.google.com/maps/place/7R67%2BH5V+GMIM+Imanuel+Leilem,+Jl.+kawangkoan-Tomohon,+Leilem,+Kec.+Sonder,+Kabupaten+Minahasa,+Sulawesi+Utara/@1.2614928,124.8129333,17z/data=!4m6!3m5!1s0x32876bfb40d65e4b:0x67e760b787718da2!8m2!3d1.2614928!4d124.8129333!16s%2Fg%2F11ngjx1l13
 
 alamat url acara2
-url-2: https://www.google.com/maps?q=1.3012112,124.9108982
+url-2: https://www.google.com/maps/place/Four+Points+by+Sheraton+Manado,+Jl.+Piere+Tendean,+Kec.+Sario,+Kota+Manado,+Sulawesi+Utara+95111/@1.4702922,124.8307451,16z/data=!4m6!3m5!1s0x328774e2e6f8abf5:0x5d2b674b0f18ebd3!8m2!3d1.4702922!4d124.8307451!16s%2Fg%2F11c5xt87cg
 
 alamat url kalender
 url-3: kalender.html
@@ -60,31 +60,39 @@ url-video: https://ia903401.us.archive.org/23/items/wedding-video_202502/wedding
 ========== "KISAH KAMI" ==========
 
 ("PAKAI KISAH KAMI")
-cerita-required: Tidak
+cerita-required: Ya
 
-waktu-cerita-1: 
+waktu-cerita-1: Januari 2021
 judul-cerita-1: Pertama Kali Kenal
-isi-cerita-1: 
+isi-cerita-1: Pertemuan pertama kami mungkin terasa biasa, tetapi siapa sangka itu adalah awal dari perjalanan yang berarti. Dari sekadar saling mengenal, obrolan ringan mulai mengalir, menghadirkan tawa dan rasa penasaran. Hari demi hari, kami semakin memahami satu sama lain, membangun fondasi kebersamaan yang perlahan tumbuh menjadi sesuatu yang lebih spesial.
 
-waktu-cerita-2: 
-judul-cerita-2: Pertama Kali Kenal
-isi-cerita-2: 
+waktu-cerita-2: Mei 2022
+judul-cerita-2: Mulai Dekat
+isi-cerita-2: Seiring berjalannya waktu, kami semakin mengenal satu sama lain. Percakapan yang dulu sekadar basa-basi kini berubah menjadi diskusi mendalam tentang mimpi, harapan, dan masa depan. Kebersamaan yang terasa nyaman membuat kami sadar bahwa ada sesuatu yang lebih dari sekadar pertemanan.
 
-waktu-cerita-3: 
-judul-cerita-3: Pertama Kali Kenal
-isi-cerita-3: 
+waktu-cerita-3: Juli 2022
+judul-cerita-3: Menyatakan Cinta
+isi-cerita-3: Saat itu, perasaan yang terpendam akhirnya terucap. Dengan penuh keberanian, aku mengungkapkan apa yang selama ini ada di hati. Kekhawatiran akan jawaban yang mungkin kudapatkan perlahan tergantikan oleh senyuman manis dan tatapan penuh kasih. Hari itu menjadi awal dari babak baru dalam perjalanan kami.
 
-waktu-cerita-4: 
-judul-cerita-4: Pertama Kali Kenal
-isi-cerita-4: 
+waktu-cerita-4: Agustus 2023
+judul-cerita-4: Tunangan
+isi-cerita-4: Setelah melewati banyak momen bersama, akhirnya kami memutuskan untuk membawa hubungan ini ke tahap yang lebih serius. Dalam suasana penuh kebahagiaan, cincin disematkan sebagai tanda janji untuk melangkah ke masa depan bersama. Momen ini menjadi bukti bahwa perjalanan cinta kami semakin dekat menuju ikatan yang lebih kuat.
 
 ========== "GIFT" ==========
-rekening-1: 1728593876
-rekening-2: 172859387612345
-rekening-3: 085143731606
-rekening-4: 085143731606
 
-gift-01: ../assets/01.svg
-gift-02: ../assets/02.svg
-gift-03: ../assets/03.svg
-gift-04: ../assets/04.svg
+("PAKAI GIFT")
+gift-required: Ya
+bank-1-required: Ya
+bank-2-required: Tidak
+bank-3-required: Ya
+bank-4-required: Tidak
+
+
+nama-bank-1: Bank BNI
+rekening-1: 1728593876
+nama-bank-2: Bank BRI
+rekening-2: 172859387612345
+nama-bank-3: DANA
+rekening-3: 085143731606
+nama-bank-4: GOPAY
+rekening-4: 085143731606
