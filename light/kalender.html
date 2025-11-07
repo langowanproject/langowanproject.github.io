@@ -157,10 +157,8 @@
         const daysInMonth = new Date(config.year, config.month + 1, 0).getDate();
         let firstDay = new Date(config.year, config.month, 1).getDay();
 
-        // Mengatur minggu dimulai dari hari Minggu (0)
-        if (firstDay === 0) {
-            firstDay = 7; // Ubah Minggu jadi 7 agar start dengan Senin
-        }
+        // Ubah Minggu (0) menjadi 7 untuk memastikan minggu dimulai dari hari Minggu
+        firstDay = firstDay === 0 ? 7 : firstDay;
 
         // Tambah sel kosong sebelum tanggal 1
         for (let i = 1; i < firstDay; i++) {
