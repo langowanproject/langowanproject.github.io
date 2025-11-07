@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="home-content-2">
                     <div class="line"></div>
-                    <h5 class="tanggal-pemberkatan text-shadow"></h3>
+                    <h5 class="tanggal-acara1 text-shadow"></h3>
                     <div class="line"></div>
                 </div>
             </div>
